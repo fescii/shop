@@ -16,7 +16,7 @@
   border-radius: 50px;
   letter-spacing: 1px;
   color: var(--white-color);
-  font-size: var(--font-16);
+  font-size: 1rem;
   text-transform: capitalize;
   cursor: pointer;
   background-color: var(--main-color);
@@ -101,7 +101,7 @@
   border-radius: 50px;
   letter-spacing: 1px;
   color: var(--white-color);
-  font-size: var(--font-16);
+  font-size: 1rem;
   text-transform: capitalize;
   cursor: pointer;
   background-color: var(--color-two);
@@ -214,8 +214,8 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 0;
-  width: 700px;
+  gap: 20px;
+  width: 750px;
   height: 500px;
   max-height: max-content;
   min-height: min-content;
@@ -360,6 +360,7 @@
 
 #modal-product > .content .details  > .body > .price {
   /* border: 1px solid red; */
+  margin: 20px 0 0 0;
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -399,8 +400,89 @@
 }
 
 #modal-product > .content .details > .actions {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
-  /* align-self: flex-end; */
-  justify-self: end;
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  /* justify-content: center; */
+}
+
+#modal-product > .content .details > .actions > .top-actions {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+#modal-product > .content .details > .actions .action {
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  padding: 5px 12px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  color: #404040;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid #80808017;
+  /* background-color: var(--color-two); */
+  /* background-color: var(--main-color); */
+}
+
+#modal-product > .content .details > .actions > .top-actions .action:hover {
+  color: var(--main-color);
+}
+
+#modal-product > .content .details > .actions > .action {
+  overflow: hidden;
+  border: none;
+  color: var(--white-color);
+  font-weight: 500;
+  background-color: var(--main-color);
+}
+
+#modal-product > .content .details > .actions > .action svg,
+#modal-product > .content .details > .actions > .action span.text {
+  z-index: 10;
+}
+
+#modal-product > .content .details > .actions > .action:before {
+  transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  position: absolute;
+  width: 200%;
+  height: 300%;
+  content: "";
+  top: -300%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 50%;
+  z-index: 1;
+  background: var(--color-two);
+}
+
+#modal-product > .content .details > .actions > .action:hover:before {
+  top: -10px;
+}
+
+#modal-product > .content .details > .actions .action svg {
+  width: 24px;
+  height: 24px;
+}
+
+#modal-product > .content .details > .actions .action.inquire svg {
+  margin: 2px 0 0 0;
+}
+
+#modal-product > .content .details > .actions .action span.text {
+  /* font-weight: 600; */
+  font-size: 1.1rem;
 }
