@@ -2065,9 +2065,12 @@ body
 	object-fit: cover;
 }
 
-body>main.main>section.content.filter{
-	border: 1px solid #303030;
-	/* padding-top: 20px; */
+body>main.main>section.content.alternative{
+	/* border: 1px solid #303030; */
+	background-color: transparent;
+	background-image: url('/img/slider/16.jpg');
+	background-position: 100%;
+	background-size: cover;
 }
 
 body>main.main>section.content>.featured-head {
@@ -2205,6 +2208,7 @@ section.content.filter>.products>.product>.content>a:hover {
 	color: var(--main-color);
 }
 
+/* Products Part Two */ 
 
 .products-two {
 	/* border: 1px solid black; */
