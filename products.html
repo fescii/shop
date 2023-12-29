@@ -20,19 +20,21 @@
 
 		//Products
 		import ProductClassic from "./js/product.classic.js";
+		import ProductContainer from "./js/product.container.js";
 
     //Register Modals
     customElements.define("modal-product", ModalProduct);
 
 		//Register Products
 		customElements.define("product-classic", ProductClassic);
+		customElements.define("product-container", ProductContainer);
 
   </script>
 
 </head>
 
 <body>
-	<modal-product></modal-product>
+	<!-- <modal-product></modal-product> -->
 	<main class="main">
 		<header class="header">
 			<div class="logo">
@@ -296,422 +298,89 @@
 				<p class="description">As Photographers we help brands or people with everything from Product, Advertising.</p>
 			</div>
 			<div class="products-two">
-				<div class="product-two">
-					<div class="image">
-						<img src="img/product/furits/14.jpg" alt="Product" srcset="">
-					</div>
-					<div class="details">
-						<p class="name">Pinapple Freash</p>
-						<p class="price">Ksh. 335.00</p>
-						<!-- Button Box -->
-						<div class="button-box">
-							<a class="btn-style-one theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">Buy <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">Buy<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-							<a class="btn-style-two theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="product-two">
-					<div class="image">
-						<img src="img/product/furits/15.jpg" alt="Product" srcset="">
-					</div>
-					<div class="details">
-						<p class="name">Kropi Jussi</p>
-						<p class="price">Ksh. 320.00</p>
-						<!-- Button Box -->
-						<div class="button-box">
-							<a class="btn-style-one theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">Buy <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">Buy<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-							<a class="btn-style-two theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="product-two">
-					<div class="image">
-						<img src="img/product/furits/17.jpg" alt="Product" srcset="">
-					</div>
-					<div class="details">
-						<p class="name">Grean Lemooon</p>
-						<p class="price">Ksh. 335.00</p>
-						<!-- Button Box -->
-						<div class="button-box">
-							<a class="btn-style-one theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">Buy <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">Buy<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-							<a class="btn-style-two theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="product-two">
-					<div class="image">
-						<img src="img/product/furits/17.jpg" alt="Product" srcset="">
-					</div>
-					<div class="details">
-						<p class="name">Grean Lemooon</p>
-						<p class="price">Ksh. 335.00</p>
-						<!-- Button Box -->
-						<div class="button-box">
-							<a class="btn-style-one theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">Buy <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">Buy<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-							<a class="btn-style-two theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="product-two">
-					<div class="image">
-						<img src="img/product/furits/14.jpg" alt="Product" srcset="">
-					</div>
-					<div class="details">
-						<p class="name">Pinapple Freash</p>
-						<p class="price">Ksh. 335.00</p>
-						<!-- Button Box -->
-						<div class="button-box">
-							<a class="btn-style-one theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">Buy <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">Buy<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-							<a class="btn-style-two theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="product-two">
-					<div class="image">
-						<img src="img/product/furits/15.jpg" alt="Product" srcset="">
-					</div>
-					<div class="details">
-						<p class="name">Kropi Jussi</p>
-						<p class="price">Ksh. 320.00</p>
-						<!-- Button Box -->
-						<div class="button-box">
-							<a class="btn-style-one theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">Buy <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">Buy<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-							<a class="btn-style-two theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="product-two">
-					<div class="image">
-						<img src="img/product/furits/17.jpg" alt="Product" srcset="">
-					</div>
-					<div class="details">
-						<p class="name">Grean Lemooon</p>
-						<p class="price">Ksh. 335.00</p>
-						<!-- Button Box -->
-						<div class="button-box">
-							<a class="btn-style-one theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">Buy <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">Buy<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-							<a class="btn-style-two theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="product-two">
-					<div class="image">
-						<img src="img/product/furits/17.jpg" alt="Product" srcset="">
-					</div>
-					<div class="details">
-						<p class="name">Grean Lemooon</p>
-						<p class="price">Ksh. 335.00</p>
-						<!-- Button Box -->
-						<div class="button-box">
-							<a class="btn-style-one theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">Buy <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">Buy<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-							<a class="btn-style-two theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="product-two">
-					<div class="image">
-						<img src="img/product/furits/14.jpg" alt="Product" srcset="">
-					</div>
-					<div class="details">
-						<p class="name">Pinapple Freash</p>
-						<p class="price">Ksh. 335.00</p>
-						<!-- Button Box -->
-						<div class="button-box">
-							<a class="btn-style-one theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">Buy <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">Buy<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-							<a class="btn-style-two theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="product-two">
-					<div class="image">
-						<img src="img/product/furits/15.jpg" alt="Product" srcset="">
-					</div>
-					<div class="details">
-						<p class="name">Kropi Jussi</p>
-						<p class="price">Ksh. 320.00</p>
-						<!-- Button Box -->
-						<div class="button-box">
-							<a class="btn-style-one theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">Buy <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">Buy<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-							<a class="btn-style-two theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="product-two">
-					<div class="image">
-						<img src="img/product/furits/17.jpg" alt="Product" srcset="">
-					</div>
-					<div class="details">
-						<p class="name">Grean Lemooon</p>
-						<p class="price">Ksh. 335.00</p>
-						<!-- Button Box -->
-						<div class="button-box">
-							<a class="btn-style-one theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">Buy <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">Buy<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-							<a class="btn-style-two theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="product-two">
-					<div class="image">
-						<img src="img/product/furits/17.jpg" alt="Product" srcset="">
-					</div>
-					<div class="details">
-						<p class="name">Grean Lemooon</p>
-						<p class="price">Ksh. 335.00</p>
-						<!-- Button Box -->
-						<div class="button-box">
-							<a class="btn-style-one theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">Buy <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">Buy<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-							<a class="btn-style-two theme-btn">
-								<div class="btn-wrap">
-									<span class="text-one">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">View<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
+
+				<product-container product-image="img/product/furits/14.jpg" name="Pinapple Freash" price="33.25">
+				</product-container>
+
+				<product-container product-image="img/product/furits/15.jpg" name="Kropi Jussi" price="30.25">
+				</product-container>
+
+				<product-container product-image="img/product/furits/17.jpg" name="Grean Lemooon" price="42.75">
+				</product-container>
+
+				<product-container product-image="img/product/furits/15.jpg" name="Kropi Jussi" price="30.25">
+				</product-container>
+
+				<product-container product-image="img/product/furits/14.jpg" name="Pinapple Freash" price="33.25">
+				</product-container>
+				
+				<product-container product-image="img/product/furits/15.jpg" name="Kropi Jussi" price="30.25">
+				</product-container>
+				
+				<product-container product-image="img/product/furits/17.jpg" name="Grean Lemooon" price="42.75">
+				</product-container>
+				
+				<product-container product-image="img/product/furits/15.jpg" name="Kropi Jussi" price="30.25">
+				</product-container>
+
+				<product-container product-image="img/product/furits/14.jpg" name="Pinapple Freash" price="33.25">
+				</product-container>
+				
+				<product-container product-image="img/product/furits/15.jpg" name="Kropi Jussi" price="30.25">
+				</product-container>
+				
+				<product-container product-image="img/product/furits/17.jpg" name="Grean Lemooon" price="42.75">
+				</product-container>
+				
+				<product-container product-image="img/product/furits/15.jpg" name="Kropi Jussi" price="30.25">
+				</product-container>
+				
 			</div>
 		</section>
 
-		<section class="content filter">
-			<div class="featured-head">
-				<h2 class="title">Bananas</h2>
-				<p class="description">As Photographers we help brands or people with everything from Product, Advertising.</p>
-			</div>
-			<div class="products">
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/14.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Pinapple Freash</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
+			<section class="content filter">
+				<div class="featured-head">
+					<h2 class="title">Bananas</h2>
+					<p class="description">As Photographers we help brands or people with everything from Product, Advertising.</p>
 				</div>
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/8.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Red Bedena</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
+				<div class="products">
+					<product-classic product-image="img/product/furits/14.jpg" name="Pinapple Freash" price="25.25" old-price="33.25">
+					</product-classic>
+			
+					<product-classic product-image="img/product/furits/8.jpg" name="Red Bedena" price="25.25" old-price="33.25">
+					</product-classic>
+			
+					<product-classic product-image="img/product/furits/17.jpg" name="Grean Lemooon" price="25.25" old-price="33.25">
+					</product-classic>
+			
+					<product-classic product-image="img/product/furits/14.jpg" name="Pinapple Freash" price="25.25" old-price="33.25">
+					</product-classic>
+			
+					<product-classic product-image="img/product/furits/8.jpg" name="Red Bedena" price="25.25" old-price="33.25">
+					</product-classic>
+			
+					<product-classic product-image="img/product/furits/17.jpg" name="Grean Lemooon" price="25.25" old-price="33.25">
+					</product-classic>
+			
+					<product-classic product-image="img/product/furits/14.jpg" name="Pinapple Freash" price="25.25" old-price="33.25">
+					</product-classic>
+			
+					<product-classic product-image="img/product/furits/8.jpg" name="Red Bedena" price="25.25" old-price="33.25">
+					</product-classic>
+			
+					<product-classic product-image="img/product/furits/17.jpg" name="Grean Lemooon" price="25.25" old-price="33.25">
+					</product-classic>
+			
+					<product-classic product-image="img/product/furits/14.jpg" name="Pinapple Freash" price="25.25" old-price="33.25">
+					</product-classic>
+			
+					<product-classic product-image="img/product/furits/8.jpg" name="Red Bedena" price="25.25" old-price="33.25">
+					</product-classic>
+			
+					<product-classic product-image="img/product/furits/17.jpg" name="Grean Lemooon" price="25.25" old-price="33.25">
+					</product-classic>
 				</div>
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/17.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Grean Lemooon</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
-				</div>
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/14.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Pinapple Freash</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
-				</div>
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/8.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Red Bedena</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
-				</div>
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/17.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Grean Lemooon</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
-				</div>
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/14.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Pinapple Freash</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
-				</div>
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/8.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Red Bedena</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
-				</div>
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/17.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Grean Lemooon</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
-				</div>
-			</div>
-		</section>
+			</section>
 	
 	</main>
 	<footer class="footer">
