@@ -248,6 +248,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 10px;
 }
 
 #modal-product > .content .images .current-image img {
@@ -257,6 +258,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 10px;
 }
 
 #modal-product > .content .images .images-selector {
