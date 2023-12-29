@@ -15,11 +15,17 @@
 
 	<title>Storyteller Arts</title>
 	<script type="module">
-    //Apps-Modals
+    //Modals
     import ModalProduct from "./js/modal.product.js";
 
-    //Apps-modals
+		//Products
+		import ProductClassic from "./js/product.classic.js";
+
+    //Register Modals
     customElements.define("modal-product", ModalProduct);
+
+		//Register Products
+		customElements.define("product-classic", ProductClassic);
 
   </script>
 
@@ -246,123 +252,41 @@
 				<p class="description">As Photographers we help brands or people with everything from Product, Advertising.</p>
 			</div>
 			<div class="products">
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/14.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Pinapple Freash</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
-				</div>
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/8.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Red Bedena</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
-				</div>
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/17.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Grean Lemooon</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
-				</div>
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/14.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Pinapple Freash</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
-				</div>
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/8.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Red Bedena</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
-				</div>
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/17.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Grean Lemooon</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
-				</div>
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/14.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Pinapple Freash</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
-				</div>
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/8.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Red Bedena</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
-				</div>
-				<div class="product">
-					<div class="product-img">
-						<img src="img/product/furits/17.jpg" alt="">
-					</div>
-					<div class="content">
-						<h5><a href="#">Grean Lemooon</a></h5>
-						<div class="price">
-							<span>Ksh 25.22</span>
-							<span class="old">Ksh 25.22</span>
-						</div>
-						<a href="#">Add to cart →</a>
-					</div>
-				</div>
+				<product-classic product-image="img/product/furits/14.jpg" name="Pinapple Freash" price="25.25" old-price="33.25">
+				</product-classic>
+				
+				<product-classic product-image="img/product/furits/8.jpg" name="Red Bedena" price="25.25" old-price="33.25">
+				</product-classic>
+
+				<product-classic product-image="img/product/furits/17.jpg" name="Grean Lemooon" price="25.25" old-price="33.25">
+				</product-classic>
+
+				<product-classic product-image="img/product/furits/14.jpg" name="Pinapple Freash" price="25.25" old-price="33.25">
+				</product-classic>
+				
+				<product-classic product-image="img/product/furits/8.jpg" name="Red Bedena" price="25.25" old-price="33.25">
+				</product-classic>
+				
+				<product-classic product-image="img/product/furits/17.jpg" name="Grean Lemooon" price="25.25" old-price="33.25">
+				</product-classic>
+
+				<product-classic product-image="img/product/furits/14.jpg" name="Pinapple Freash" price="25.25" old-price="33.25">
+				</product-classic>
+				
+				<product-classic product-image="img/product/furits/8.jpg" name="Red Bedena" price="25.25" old-price="33.25">
+				</product-classic>
+				
+				<product-classic product-image="img/product/furits/17.jpg" name="Grean Lemooon" price="25.25" old-price="33.25">
+				</product-classic>
+				
+				<product-classic product-image="img/product/furits/14.jpg" name="Pinapple Freash" price="25.25" old-price="33.25">
+				</product-classic>
+				
+				<product-classic product-image="img/product/furits/8.jpg" name="Red Bedena" price="25.25" old-price="33.25">
+				</product-classic>
+				
+				<product-classic product-image="img/product/furits/17.jpg" name="Grean Lemooon" price="25.25" old-price="33.25">
+				</product-classic>
 			</div>
 		</section>
 
