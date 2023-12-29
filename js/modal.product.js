@@ -19,7 +19,8 @@ export default class ModalProduct extends HTMLElement {
 
   connectedCallback() {
     // console.log('We are inside connectedCallback');
-
+    this.disableScroll()
+    this.closeModal()
   }
 
   disconnectedCallback() {
@@ -42,6 +43,30 @@ export default class ModalProduct extends HTMLElement {
   enableScroll() {
     document.body.classList.remove("stop-scrolling");
     window.onscroll = function () { };
+  }
+
+  closeModal() {
+    const self = this;
+    const button  = this.shadowObj.querySelector('.content > span.close')
+    const overlay  = this.shadowObj.querySelector('div.overlay')
+
+    if (button) {
+      button.addEventListener('click', e => {
+        e.preventDefault()
+        e.stopPropagation()
+
+        self.remove()
+      })
+    }
+
+    if (overlay) {
+      overlay.addEventListener('click', e => {
+        e.preventDefault()
+        e.stopPropagation()
+
+        self.remove()
+      })
+    }
   }
 
   getTemplate() {

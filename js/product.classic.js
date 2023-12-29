@@ -22,7 +22,18 @@ export default class ProductClassic extends HTMLElement {
   }
 
   openDetails() {
+    const body = document.querySelector('body')
+    const button  = this.shadowObj.querySelector('.content > h5')
+    const content = `<modal-product></modal-product>`
 
+    if (body && button) {
+      button.addEventListener('click', e => {
+        e.preventDefault()
+        e.stopPropagation()
+
+        body.insertAdjacentHTML('beforebegin', content)
+      })
+    }
   }
 
   getTemplate() {
@@ -39,7 +50,7 @@ export default class ProductClassic extends HTMLElement {
 				<img src="${this.getAttribute('product-image')}" alt="">
 			</div>
 			<div class="content">
-			  <h5><a href="#">${this.getAttribute('name')}</a></h5>
+			  <h5><a>${this.getAttribute('name')}</a></h5>
 				<div class="price">
 					<span>Ksh ${this.getAttribute('price')}</span>
 					<span class="old">Ksh ${this.getAttribute('old-price')}</span>
@@ -110,14 +121,10 @@ export default class ProductClassic extends HTMLElement {
         font-weight: 500;
         letter-spacing: 0.2px;
         margin: 0;
+        cursor: pointer;
       }
       .content>h5:hover {
         color: var(--main-color);
-      }
-
-      .content>h5 a {
-        color: inherit;
-        text-decoration: none;
       }
 
       .content>.price{
