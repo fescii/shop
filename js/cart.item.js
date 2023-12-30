@@ -7,6 +7,8 @@ export default class CartItem extends HTMLElement {
     // lets create our shadow root
     this.shadowObj = this.attachShadow({mode: 'open'});
 
+    this.totalAmmount = this.parentElement.querySelector('.totals > h1.title .ammount')
+
     this.render();
   }
 
@@ -20,6 +22,7 @@ export default class CartItem extends HTMLElement {
 
     this.calculateTotal(this.getAttribute('quantity'), this.getAttribute('price'))
     this.activateButtons()
+    this.removeItem()
   }
 
   getTemplate() {
@@ -81,6 +84,25 @@ export default class CartItem extends HTMLElement {
     `
   }
 
+  removeItem() {
+    const self = this
+    const btn = this.shadowObj.querySelector('.totals .actions .action.remove')
+
+    if (btn && this.totalAmmount) {
+      btn.addEventListener('click', e => {
+        e.preventDefault()
+        e.stopPropagation()
+
+        const floatedPrice = parseFloat(this.getAttribute('price'))
+        const intQuanitity = parseInt(this.getAttribute('quantity'))
+
+        self.totalAmmount.textContent -= (floatedPrice * intQuanitity)
+
+        self.remove()
+      })
+    }
+  }
+
   calculateTotal(quanity, price) {
     const floatedPrice = parseFloat(price)
     const intQuanitity = parseInt(quanity)
@@ -94,24 +116,23 @@ export default class CartItem extends HTMLElement {
 
   activateButtons(){
     const self = this
-    const totalAmmount = this.parentElement.querySelector('.totals > h1.title .ammount')
     const no = this.shadowObj.querySelector('.picker span.no');
     const leftNav = this.shadowObj.querySelector('.picker #left-nav');
     const rightNav = this.shadowObj.querySelector('.picker #right-nav');
 
-    if (no && leftNav && rightNav && totalAmmount) {
+    if (no && leftNav && rightNav && this.totalAmmount) {
       rightNav.addEventListener('click', (e) => {
         e.preventDefault()
-        let total = parseFloat(totalAmmount.textContent)
+        let total = parseFloat(self.totalAmmount.textContent)
         no.textContent = parseInt(no.textContent) + 1
         self.setAttribute('quantity', no.textContent)
         self.calculateTotal(no.textContent, self.getAttribute('price'))
 
-        totalAmmount.textContent = total += parseFloat(self.getAttribute('price'))
+        self.totalAmmount.textContent = total += parseFloat(self.getAttribute('price'))
       })
 
       leftNav.addEventListener('click', (e) => {
-        let total = parseFloat(totalAmmount.textContent)
+        let total = parseFloat(self.totalAmmount.textContent)
         if (parseInt(no.textContent) === 1) {
           no.textContent = 1
           self.setAttribute('quantity', no.textContent)
@@ -122,7 +143,7 @@ export default class CartItem extends HTMLElement {
           self.setAttribute('quantity', no.textContent)
           self.calculateTotal(no.textContent, self.getAttribute('price'))
 
-          totalAmmount.textContent = total -= parseFloat(self.getAttribute('price'))
+          self.totalAmmount.textContent = total -= parseFloat(self.getAttribute('price'))
         }
 
       })
