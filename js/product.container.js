@@ -116,7 +116,7 @@ export default class ProductContainer extends HTMLElement {
 
       .image {
         /* border: 2px solid red; */
-        background-color: #f3f3f3;
+        /* background-color: #f3f3f3; */
         height: 200px;
         width: 200px;
         display: flex;
@@ -179,7 +179,7 @@ export default class ProductContainer extends HTMLElement {
        .details > .content .rating .people{
         /* border: 1px solid red; */
         color: #404040;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         margin: 0 0 0 10px;
       }
 
@@ -188,8 +188,8 @@ export default class ProductContainer extends HTMLElement {
         /* text-align: center; */
         color: #404040;
         font-weight: 500;
-        font-size: 1.12rem;
-        line-height: 1.2;
+        font-size: 1rem;
+        line-height: 1.4;
         letter-spacing: 0.2px;
       }
 
