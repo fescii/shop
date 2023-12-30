@@ -2184,6 +2184,11 @@ section.content > .tab .selections ul.category-list {
 	align-items: center;
 	gap: 5px;
 	color: #53595f;
+	transition: all 300ms ease;
+}
+
+.selections ul.category-list li:hover {
+	color: var(--main-color);
 }
 
 .selections ul.category-list li a.link {
