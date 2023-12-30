@@ -23,11 +23,19 @@ export default class ProductContainer extends HTMLElement {
 
   openDetails() {
     const body = document.querySelector('body')
-    const button  = this.shadowObj.querySelector('.btn-style-two')
+    const image  = this.shadowObj.querySelector('.image')
+    const name  = this.shadowObj.querySelector('.details p.name')
     const content = `<modal-product></modal-product>`
 
-    if (body && button) {
-      button.addEventListener('click', e => {
+    if (body && image && name) {
+      image.addEventListener('click', e => {
+        e.preventDefault()
+        e.stopPropagation()
+
+        body.insertAdjacentHTML('beforebegin', content)
+      })
+
+      name.addEventListener('click', e => {
         e.preventDefault()
         e.stopPropagation()
 
@@ -183,7 +191,7 @@ export default class ProductContainer extends HTMLElement {
         height: 15px;
       }
 
-       .details > .content .rating .people{
+      .details > .content .rating .people{
         /* border: 1px solid red; */
         color: #404040;
         font-size: 0.9rem;
@@ -197,7 +205,20 @@ export default class ProductContainer extends HTMLElement {
         font-weight: 500;
         font-size: 1rem;
         line-height: 1.4;
-        letter-spacing: 0.2px;
+        /* letter-spacing: 0.2px; */
+      }
+
+      .details p.name {
+        color: #404040;
+        font-weight: 500;
+        font-size: 1.1rem;
+        line-height: 1.4;
+        cursor: pointer;
+        /* letter-spacing: 0.2px; */
+      }
+
+      .details p.name:hover {
+        color: var(--main-color);
       }
 
       .details p.price {

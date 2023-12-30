@@ -2065,14 +2065,6 @@ body
 	object-fit: cover;
 }
 
-body>main.main>section.content.alternative{
-	/* border: 1px solid #303030; */
-	background-color: transparent;
-	/* background-image: url('/img/slider/16.jpg');
-	background-position: 100%;
-	background-size: cover; */
-}
-
 body>main.main>section.content>.featured-head {
 	/* border: 1px solid blue; */
 	width: 100%;
@@ -2105,6 +2097,33 @@ body>main.main>section.content>.featured-head>p {
 }
 
 
+/* TiTLE */
+
+section.content > .title {
+	/* background-color: #ffffff; */
+	min-width: 100%;
+	display: flex;
+	flex-flow: column;
+	margin: 0 0 20px 15px;
+}
+
+
+section.content > .title h2.title {
+	margin: 10px 0;
+	text-transform: uppercase;
+	color: var(--color-two);
+	font-weight: 600;
+}
+
+section.content > .title span.line {
+	display: inline-block;
+	height: 6px;
+	width: 40px;
+	opacity: .9;
+	border-radius: 5px;
+	margin: 0 0 0 5px;
+	background-color: var(--color-two);
+}
 
 
 /* Tabbed Section */
@@ -2152,9 +2171,9 @@ section.content > .tab > .selections{
 section.content > .tab .selections .head{
 	/* border: 1px solid #dd0f0f; */
 	/* background-color: #d9e7ff; */
-	background-color: #c8f75d;
+	background-color: #89c205;
 	width: 100%;
-	color: #404040;
+	color: #ffffff;
 	display: flex;
 	align-items: center;
 	gap: 5px;
@@ -2203,6 +2222,14 @@ section.content > .tab .selections ul.category-list {
 }
 
 
+section.content.filter{
+	/* border: 1px solid #303030; */
+	background-color: #ffffff;
+	/* background-image: url('/img/slider/16.jpg');
+	background-position: 100%;
+	background-size: cover; */
+}
+
 
 
 
@@ -2212,7 +2239,7 @@ section.content > .tab .selections ul.category-list {
 section.content.filter>.products{
 	/* border: 1px solid #303030; */
 	padding: 20px 0;
-	width: 100%;
+	max-width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	column-gap: 30px;
@@ -2235,12 +2262,12 @@ section.content.filter>.products{
 .products-two {
 	/* border: 1px solid black; */
 	margin: 30px 0 0 0;
-	width: 100%;
+	max-width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	align-items: center;
 	justify-content: center;
-	gap: 30px;
+	gap: 15px;
 }
 
 
