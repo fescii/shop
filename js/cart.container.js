@@ -18,6 +18,8 @@ export default class CartContainer extends HTMLElement {
 
   connectedCallback() {
     // console.log('We are inside connectedCallback');
+
+    this.updateTotal()
   }
 
   getTemplate() {
@@ -26,6 +28,24 @@ export default class CartContainer extends HTMLElement {
       ${this.getItems()}
       ${this.getStyles()}
     `
+  }
+
+  updateTotal() {
+    const total = this.querySelector('.cart-items .totals > h1.title .ammount')
+    const items = this.querySelectorAll('cart-item')
+
+    let totalAmmount = 0.00
+
+    if (total && items) {
+      items.forEach(item => {
+        let quanity = item.getAttribute('quantity') || 1
+        let price = item.getAttribute('price')
+
+        totalAmmount += (parseInt(quanity) * parseFloat(price))
+      })
+
+      total.textContent = totalAmmount
+    }
   }
 
   getItems(){
@@ -46,12 +66,12 @@ export default class CartContainer extends HTMLElement {
           <p class="head">Total</p>
           <h1 class="title">
             <span class="curr">Ksh.</span>
-            <span class="ammount">3,000</span>
+            <span class="ammount">0.0</span>
           </h1>
           <p class="text">
             The above is your total ammout, proceed to checkout in order to pay for the items
           </p>
-          <a href="#" class="action">Proceed to check out</a>
+          <a href="#" class="action">Proceed to checkout</a>
         </div>
       </div>
     `
@@ -187,7 +207,7 @@ export default class CartContainer extends HTMLElement {
 
       .cart-items > .totals {
         border-top: 1px solid #80808017;
-        padding: 30px 0 0 0;
+        padding: 50px 0;
         width: 100%;
         display: flex;
         flex-flow: column;
