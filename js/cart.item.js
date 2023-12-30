@@ -93,12 +93,24 @@ export default class CartItem extends HTMLElement {
         e.preventDefault()
         e.stopPropagation()
 
-        const floatedPrice = parseFloat(this.getAttribute('price'))
-        const intQuanitity = parseInt(this.getAttribute('quantity'))
+        const items = self.parentElement.querySelectorAll('cart-item')
 
-        self.totalAmmount.textContent -= (floatedPrice * intQuanitity)
+        if (!items || items.length === 1) {
+          const cartContainer = self.parentElement.parentElement;
 
-        self.remove()
+          if (cartContainer) {
+            cartContainer.setAttribute('empty', 'true')
+          }
+        }
+        else {
+          const floatedPrice = parseFloat(this.getAttribute('price'))
+          const intQuanitity = parseInt(this.getAttribute('quantity'))
+
+          self.totalAmmount.textContent -= (floatedPrice * intQuanitity)
+
+          self.remove()
+        }
+        
       })
     }
   }

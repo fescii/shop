@@ -10,6 +10,15 @@ export default class CartContainer extends HTMLElement {
     this.render();
   }
 
+  // Define observed attributes
+  static get observedAttributes() {
+    return ['empty'];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.render()
+  }
+
 
   render() {
     // this.shadowObj.innerHTML = this.getTemplate();
@@ -25,7 +34,7 @@ export default class CartContainer extends HTMLElement {
   getTemplate() {
     // Show HTML Here
     return `
-      ${this.getItems()}
+      ${this.checkIfEmpty()}
       ${this.getStyles()}
     `
   }
@@ -89,6 +98,15 @@ export default class CartContainer extends HTMLElement {
         <a href="#" class="action">Shop now</a>
       </div>
     `
+  }
+
+  checkIfEmpty() {
+    if (this.getAttribute('empty') === 'true') {
+      return this.getEmpty()
+    }
+    else {
+      return this.getItems()
+    }
   }
 
 
