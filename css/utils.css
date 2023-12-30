@@ -1,6 +1,6 @@
 /* Cart */
-:host{
-   /* border: 1px solid #808080; */
+cart-container {
+  /* border: 1px solid #808080; */
   padding: 50px 10% 20px 10%;
 	background-color: #ffffff;
   min-height: 90vh;

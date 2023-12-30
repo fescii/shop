@@ -18,15 +18,12 @@ export default class CartContainer extends HTMLElement {
 
   connectedCallback() {
     // console.log('We are inside connectedCallback');
-
-    this.calculateTotal(this.getAttribute('quantity'), this.getAttribute('price'))
-    this.activateButtons()
   }
 
   getTemplate() {
     // Show HTML Here
     return `
-      ${this.getEmpty()}
+      ${this.getItems()}
       ${this.getStyles()}
     `
   }
@@ -88,7 +85,7 @@ export default class CartContainer extends HTMLElement {
         width: 50%;
         min-height: 100%;
         /* padding: 50px 10% 20px 10%; */
-        display: none;
+        display: flex;
         flex-flow: column;
         align-items: center;
         justify-content: center;

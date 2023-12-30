@@ -16,12 +16,13 @@
   <title>Storyteller Arts</title>
 
   <script type="module">
-    //Apps-Modals
+    //Cart items
+    import CartContainer from "./js/cart.container.js";
     import CartItem from "./js/cart.item.js";
 
-    //Apps-modals
+    //Registering cart items
+    customElements.define("cart-container", CartContainer);
     customElements.define("cart-item", CartItem);
-
   </script>
 
 </head>
@@ -141,9 +142,7 @@
       </div>
     </header>
 
-    <section class="cart">
-      
-    </section>
+    <cart-container url="/something/and/nested"></cart-container>
 
 
   </main>
