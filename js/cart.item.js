@@ -144,6 +144,7 @@ export default class CartItem extends HTMLElement {
       .info {
         /* border: 1px solid red; */
         display: flex;
+        width: 250px;
         /* align-items: center; */
         justify-content: start;
         gap: 6px;
