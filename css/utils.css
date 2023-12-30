@@ -4,21 +4,23 @@ section.cart {
   /* border: 1px solid #808080; */
   padding: 50px 10% 20px 10%;
   background-color: #ffffff;
-  min-height: 80vh;
+  min-height: 90vh;
 	display: flex;
 	flex-flow: column;
 	align-items: center;
-	justify-content: center;
+	/* justify-content: center; */
 }
 
 section.cart .empty {
   /* border: 1px solid #808080; */
   margin: 0;
   width: 50%;
+	min-height: 100%;
   /* padding: 50px 10% 20px 10%; */
-  display: flex;
+  display: none;
   flex-flow: column;
   align-items: center;
+	justify-content: center;
   color: #404040;
   text-align: center;
   gap: 20px;
@@ -27,7 +29,7 @@ section.cart .empty {
 section.cart .empty > p.head {
   width: max-content;
   color: #ffffff;
-  margin: 0;
+  margin: 0 0 30px 0;
   padding: 5px 12px;
   background: rgb(223, 121, 26);
   background: linear-gradient(
@@ -91,9 +93,10 @@ section.cart .empty > .action {
 
 
 section.cart .cart-items {
-  border: 1px solid #808080;
+  /* border: 1px solid #808080; */
   margin: 0;
   width: 100%;
+	min-height: 100%;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -105,6 +108,7 @@ section.cart .cart-items {
 section.cart .cart-items > p.head {
   width: max-content;
   color: #ffffff;
+	/* text-transform: uppercase; */
 	font-weight: 500;
   margin: 0 0 25px 0;
   padding: 5px 12px;
@@ -119,7 +123,9 @@ section.cart .cart-items > p.head {
 }
 
 section.cart .cart-items .item {
-	border: 1px solid red;
+	border-bottom: 1px solid #80808017;
+	/* background-color: #80808010; */
+	padding: 5px 10px;
 	min-width: 700px;
 	display: flex;
 	align-items: center;
@@ -162,33 +168,49 @@ section.cart .cart-items .item > .info .other{
 
 section.cart .cart-items .item > .info .other p.name {
 	margin: 0;
+	font-size: 1.1rem;
 	font-weight: 500;
 	color: #404040;
 }
 
 section.cart .cart-items .item > .info .other .price {
-	font-weight: 600;
+	font-weight: 500;
 	color: var(--main-color);
-	font-size: 1.1rem;
+	font-size: 1rem;
 }
 
 section.cart .cart-items .item > .info .other .price * {
 	color: inherit;
 }
 
-.picker {
+section.cart .cart-items .item > .quanity {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2px;
+}
+
+section.cart .cart-items .item > .quanity .q {
+	/* border: 1px solid red; */
+	margin: 0;
+	font-weight: 500;
+	color: #606060;
+}
+
+section.cart .cart-items .item > .quanity .picker {
   /* border: 1px solid black; */
-  /* background-color: #80808010; */
+  background-color: #80808010;
   align-self: start;
   display: flex;
   flex-flow: row;
-  padding: 15px 15px;
+  padding: 5px 15px;
   border-radius: 15px;
   align-items: start;
   gap: 15px;
 }
 
-.picker span.no {
+section.cart .cart-items .item > .quanity .picker span.no {
   /* border: 1px solid black; */
   background-color: #ffffff;
   width: 30px;
@@ -199,9 +221,9 @@ section.cart .cart-items .item > .info .other .price * {
   color: #099eef;
 }
 
-.picker > .nav {
-  width: 28px;
-  height: 28px;
+section.cart .cart-items .item > .quanity .picker > .nav {
+  width: 26px;
+  height: 26px;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -218,12 +240,60 @@ section.cart .cart-items .item > .info .other .price * {
   background-color: rgb(247, 145, 162);
 }
 
-.picker > .nav > svg {
+section.cart .cart-items .item > .quanity .picker > .nav > svg {
   rotate: -90deg;
   width: 16px;
   height: 16px;
   stroke-width: 1.8;
 }
+
+section.cart .cart-items .item > .totals {
+	/* border: 1px solid red; */
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3px;
+}
+
+
+section.cart .cart-items .item > .totals .ammount {
+	font-weight: 600;
+	color: var(--main-color);
+	font-size: 1.1rem;
+}
+
+section.cart .cart-items .item > .totals .actions {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+section.cart .cart-items .item > .totals .actions .action {
+	border: 1px solid #80808017;
+	padding: 3px 10px 5px 10px;
+	color: #808080;
+	border-radius: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	font-size: 0.95rem;
+	cursor: pointer;
+}
+
+section.cart .cart-items .item > .totals .actions .action:hover {
+	color: #ef6509;
+}
+
+section.cart .cart-items .item > .totals .actions .action svg {
+	width: 20px;
+	height: 20px;
+}
+
+
+
+
 
 /* About */
 .about-top {
