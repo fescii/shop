@@ -94,19 +94,24 @@ export default class CartItem extends HTMLElement {
 
   activateButtons(){
     const self = this
+    const totalAmmount = this.parentElement.querySelector('.totals > h1.title .ammount')
     const no = this.shadowObj.querySelector('.picker span.no');
     const leftNav = this.shadowObj.querySelector('.picker #left-nav');
     const rightNav = this.shadowObj.querySelector('.picker #right-nav');
 
-    if (no && leftNav && rightNav) {
+    if (no && leftNav && rightNav && totalAmmount) {
       rightNav.addEventListener('click', (e) => {
         e.preventDefault()
+        let total = parseFloat(totalAmmount.textContent)
         no.textContent = parseInt(no.textContent) + 1
         self.setAttribute('quantity', no.textContent)
         self.calculateTotal(no.textContent, self.getAttribute('price'))
+
+        totalAmmount.textContent = total += parseFloat(self.getAttribute('price'))
       })
 
       leftNav.addEventListener('click', (e) => {
+        let total = parseFloat(totalAmmount.textContent)
         if (parseInt(no.textContent) === 1) {
           no.textContent = 1
           self.setAttribute('quantity', no.textContent)
@@ -116,6 +121,8 @@ export default class CartItem extends HTMLElement {
           no.textContent = parseInt(no.textContent) - 1
           self.setAttribute('quantity', no.textContent)
           self.calculateTotal(no.textContent, self.getAttribute('price'))
+
+          totalAmmount.textContent = total -= parseFloat(self.getAttribute('price'))
         }
 
       })
