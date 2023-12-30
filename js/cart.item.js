@@ -17,6 +17,9 @@ export default class CartItem extends HTMLElement {
 
   connectedCallback() {
     // console.log('We are inside connectedCallback');
+
+    this.calculateTotal(this.getAttribute('quantity'), this.getAttribute('price'))
+    this.activateButtons()
   }
 
   getTemplate() {
@@ -49,7 +52,7 @@ export default class CartItem extends HTMLElement {
               <path fill-rule="evenodd"  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
             </svg>
           </div>
-          <span class="no">1</span>
+          <span class="no">${this.getAttribute('quantity')}</span>
           <div id="right-nav" class="nav">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right"  viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
@@ -61,7 +64,7 @@ export default class CartItem extends HTMLElement {
         <div class="total">
           <span class="ammount">
             <span class="curr">Ksh.</span>
-            <span class="no">535.75</span>
+            <span class="no">0</span>
           </span>
         </div>
         <div class="actions">
@@ -76,6 +79,48 @@ export default class CartItem extends HTMLElement {
         </div>
       </div>
     `
+  }
+
+  calculateTotal(quanity, price) {
+    const floatedPrice = parseFloat(price)
+    const intQuanitity = parseInt(quanity)
+
+    const total = this.shadowObj.querySelector('.totals .ammount span.no');
+
+    if (total) {
+      total.textContent = (floatedPrice * intQuanitity)
+    }
+  }
+
+  activateButtons(){
+    const self = this
+    const no = this.shadowObj.querySelector('.picker span.no');
+    const leftNav = this.shadowObj.querySelector('.picker #left-nav');
+    const rightNav = this.shadowObj.querySelector('.picker #right-nav');
+
+    if (no && leftNav && rightNav) {
+      rightNav.addEventListener('click', (e) => {
+        e.preventDefault()
+        no.textContent = parseInt(no.textContent) + 1
+        self.setAttribute('quantity', no.textContent)
+        self.calculateTotal(no.textContent, self.getAttribute('price'))
+      })
+
+      leftNav.addEventListener('click', (e) => {
+        if (parseInt(no.textContent) === 1) {
+          no.textContent = 1
+          self.setAttribute('quantity', no.textContent)
+          self.calculateTotal(no.textContent, self.getAttribute('price'))
+        }
+        else{
+          no.textContent = parseInt(no.textContent) - 1
+          self.setAttribute('quantity', no.textContent)
+          self.calculateTotal(no.textContent, self.getAttribute('price'))
+        }
+
+      })
+
+    }
   }
 
   getStyles() {
