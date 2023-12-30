@@ -103,7 +103,8 @@ export default class ProductContainer extends HTMLElement {
       :host{
         /* border: 1px solid #80808037; */
         background-color: #ffffff;
-        box-shadow: 0 5px 25px rgba(109, 117, 141, 0.1);
+        box-shadow: 0 5px 20px rgba(109, 117, 141, 0.1);
+        /* box-shadow: 8px 8px 10px 0px rgba(42, 67, 113, 0.158); */
         display: flex;
         flex-flow: column;
         align-items: center;
@@ -114,9 +115,15 @@ export default class ProductContainer extends HTMLElement {
         border-radius: 15px;
       }
 
+      :host:hover {
+        cursor: pointer;
+        box-shadow: 0 5px 25px rgba(109, 117, 141, 0.1);
+      }
+
       .image {
         /* border: 2px solid red; */
         /* background-color: #f3f3f3; */
+        cursor: pointer;
         height: 200px;
         width: 200px;
         display: flex;
@@ -196,7 +203,7 @@ export default class ProductContainer extends HTMLElement {
       .details p.price {
         color: #85bd02;
         font-size: 18px;
-        font-weight: 500;
+        font-weight: 600;
         letter-spacing: 0.2px;
       }
 
