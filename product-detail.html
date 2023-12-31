@@ -6,27 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+  
   <link rel="stylesheet" href="css/global.css">
-
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/utils.css">
 
   <title>Storyteller Arts</title>
 
   <script type="module">
-    //Cart items
-    import CartContainer from "./js/cart.container.js";
-    import CartItem from "./js/cart.item.js";
+    //Apps-Modals
+    import ModalBook from "./js/modal.book.js";
 
-    //Registering cart items
-    customElements.define("cart-container", CartContainer);
-    customElements.define("cart-item", CartItem);
+    //Apps-modals
+    customElements.define("modal-book", ModalBook);
+
   </script>
 
 </head>
 
 <body>
-  <div id="modal-container"></div>
   <main class="main">
     <header class="header">
       <div class="logo">
@@ -53,9 +51,9 @@
             <span class="bar"></span>
           </a>
         </li>
-        <li class="item-link">
+        <li class="item-link active">
           <a href="" class="link">
-            <span class="link-text">Categories</span>
+            <span class="link-text">About</span>
             <span class="bar"></span>
           </a>
         </li>
@@ -63,8 +61,8 @@
       <div class="utility">
         <span class="item search" title="search">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="11.7666" cy="11.7667" r="8.98856" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
+            <circle cx="11.7666" cy="11.7667" r="8.98856" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" />
             <path d="M18.0183 18.4853L21.5423 22.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round" />
           </svg>
@@ -140,7 +138,32 @@
       </div>
     </header>
 
-    <cart-container empty="false" url="/something/and/nested"></cart-container>
+    <section class="product">
+      <div class="quick-info">
+        <div class="images">
+          <div class="current-image">
+            <img src="img/explore/shots/shot4.jpg" alt="Product Image">
+          </div>
+        </div>
+        <div class="image-options">
+          <span class="image">
+            <img src="img/product/furits/" alt="Product">
+          </span>
+          <span class="image">
+            <img src="img/product/furits/" alt="Product">
+          </span>
+          <span class="image">
+            <img src="img/product/furits/" alt="Product">
+          </span>
+          <span class="image">
+            <img src="img/product/furits/" alt="Product">
+          </span>
+          <span class="image">
+            <img src="img/product/furits/" alt="Product">
+          </span>
+        </div>
+      </div>
+    </section>
 
   </main>
   <footer class="footer">
