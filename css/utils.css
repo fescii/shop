@@ -114,7 +114,7 @@ section.product > .quick-info > .images > .image-options > .nav {
   left: 10px;
   width: 26px;
   height: 26px;
-  display: flex;
+  display: none;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
@@ -122,6 +122,10 @@ section.product > .quick-info > .images > .image-options > .nav {
   cursor: pointer;
   border-radius: 50px;
   background: linear-gradient(#53595f, #627ea0);
+}
+
+section.product > .quick-info > .images > .image-options:hover > .nav {
+  display: flex;
 }
 
 section.product > .quick-info > .images > .image-options > .nav#right-nav {
