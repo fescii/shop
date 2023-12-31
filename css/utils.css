@@ -574,7 +574,7 @@ section.product>.full-info>.main ul.tab>li.tab-item {
   display: flex;
   align-items: center;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
 }
 
 section.product>.full-info>.main ul.tab>li.tab-item:hover {
