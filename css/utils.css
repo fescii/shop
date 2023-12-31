@@ -544,7 +544,7 @@ section.product>.full-info>.main * {
 section.product>.full-info>.main ul.tab {
   height: max-content;
   width: 100%;
-  border-bottom: 1px solid #80808017;
+  border-bottom: 1px solid #80808027;
   background-color: var(--theme);
   padding: 22px 0 0 0;
   z-index: 5;
@@ -610,7 +610,88 @@ section.product>.full-info>.main ul.tab>li.active>span.line {
   border-top-right-radius: 50px;
 }
 
+section.product>.full-info>.main #description {
+  /* border: 1px solid #808080; */
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+}
 
+#description .specifications {
+  /* border: 1px solid #8f1010; */
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+}
+
+#description .title {
+  /* border: 1px solid red; */
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+#description .title h2.name {
+  font-size: 1.3rem;
+  color: var(--color-two);
+  /* letter-spacing: 1px; */
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-weight: 570;
+}
+
+#description .title span.line {
+  position: absolute;
+  bottom: -10px;
+  display: inline-block;
+  height: 4px;
+  width: 30px;
+  background-color: var(--color-two);
+  opacity: .7;
+  border-radius: 5px;
+}
+
+#description .specifications ul.spec-lists {
+  /* border: 1px solid #8f1010; */
+  margin: 10px 0 0 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+#description .specifications ul.spec-lists li.list {
+  border-top: 1px solid #80808017;
+  list-style-type: none;
+  color: #404040;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 10px;
+}
+
+#description .specifications ul.spec-lists li.list:last-of-type {
+  border-bottom: 1px solid #80808017;
+}
+
+#description .specifications ul.spec-lists li.list .key {
+  border-right: 1px solid #80808017;
+  padding: 10px 10px;
+  width: 50%;
+}
+
+#description .specifications ul.spec-lists li.list .value {
+  /* border-right: 1px solid #80808017; */
+  padding: 10px 10px;
+  /* width: 50%; */
+}
 
 
 
