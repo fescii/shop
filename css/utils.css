@@ -834,13 +834,14 @@ section.product>.full-info>.main #description {
 #reviews-container .stats > .individual-scores span.score .numbers {
   /* border: 1px solid rgb(0, 0, 0); */
   display: inline-block;
-  width: 35px;
+  width: 40px;
   font-size: 0.9rem;
   margin: 0;
 }
 
 #reviews-container .stats > .individual-scores span.score .bar {
-  border: 1px solid #80808027;
+  /* border: 1px solid #80808020; */
+  background-color: #f3f3f3;
   display: inline-block;
   width: 150px;
   height: 8px;
@@ -939,7 +940,7 @@ section.product>.full-info>.main #description {
 
 #reviews-container .user-reveiws .review  p.content {
   /* border: 1px solid #f31717f3; */
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #404040;
   line-height: 1.4;
@@ -982,6 +983,55 @@ section.product>.full-info>.main #description {
   margin: 3px 0 0 0;
 }
 
+#reviews-container .user-reveiws .actions {
+  /* border: 1px solid rgb(156, 156, 156); */
+  margin: 30px 0 0 0;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+#reviews-container .user-reveiws .actions>.action {
+  /* border: 1px solid rgb(156, 156, 156); */
+  padding: 10px 15px;
+  text-decoration: none;
+  font-family: var(--font-alt);
+  font-size: 1.1rem;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+#reviews-container .user-reveiws .actions>.explore {
+  border: 1px solid #8080805d;
+  background-color: #ffffff1f;
+  backdrop-filter: blur(84px);
+  -webkit-backdrop-filter: blur(84px);
+  box-shadow: 8px 8px 100px 0px rgba(42, 67, 113, 0.158);
+  color: var(--color-two);
+}
+
+
+#reviews-container .user-reveiws .action>.explore svg path {
+  fill: #fafafa;
+}
+
+#reviews-container .user-reveiws .actions>.action svg {
+  transition: all 0.3s linear;
+}
+
+#reviews-container .user-reveiws .text .actions>.action:hover {
+  padding: 10px 20px;
+  gap: 15px;
+}
 
 
 
