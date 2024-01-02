@@ -744,9 +744,9 @@ section.product>.full-info>.main #description {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 25px 20px;
+  padding: 20px 20px;
   border-radius: 10px;
-  width: 150px;
+  /* width: 150px; */
   /* height: 150px; */
 }
 
@@ -793,6 +793,14 @@ section.product>.full-info>.main #description {
   height: 20px;
   color: rgb(223, 121, 26);
   fill: rgb(223, 121, 26);
+}
+
+#reviews-container .stats > .total > p.text {
+  font-size: 1rem;
+  color: #404040;
+  margin: 10px 0 0 0;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 
