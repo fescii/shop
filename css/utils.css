@@ -523,11 +523,6 @@ section.product>.full-info {
   justify-content: space-between;
 }
 
-section.product>.full-info .side-tab {
-  border: 1px solid rgb(123, 255, 0);
-  width: 300px;
-  display: flex;
-}
 
 section.product>.full-info>.main {
   /* border: 1px solid rgb(123, 255, 0); */
@@ -1033,7 +1028,36 @@ section.product>.full-info>.main #description {
   gap: 15px;
 }
 
+/* Side Tab */ 
 
+section.product>.full-info .side-tab {
+  /* border: 1px solid rgb(123, 255, 0); */
+  width: 300px;
+  display: flex;
+  flex-flow: column;
+}
+
+section.product>.full-info .side-tab .title {
+  border-bottom: 1px solid #80808017;
+  background-color: hsl(0, 0%, 98%);
+  padding: 5px 0 0 5px;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+section.product>.full-info .side-tab .title h2.name {
+  font-size: 1.3rem;
+  color: var(--color-two);
+  /* letter-spacing: 1px; */
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-weight: 570;
+}
 
 
 
