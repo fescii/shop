@@ -33,7 +33,7 @@ section.product>.quick-info>.images {
 
 section.product>.quick-info>.images>.current-image {
   /* border: 2px solid red; */
-  width: 500px;
+  width: auto;
   height: 400px;
   display: flex;
   align-items: center;
@@ -84,10 +84,10 @@ section.product>.quick-info>.images>.image-options .images::-webkit-scrollbar {
 
 section.product>.quick-info>.images>.image-options .images>.image {
   border: 1px solid #80808017;
-  width: 80px;
-  height: 80px;
-  min-width: 80px;
-  min-height: 80px;
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  min-height: 70px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -889,7 +889,97 @@ section.product>.full-info>.main #description {
 #reviews-container .stats > .individual-scores span.score.one .bar .progress {
   /* border: 1px solid #80808027; */
   display: inline-block;
-  width: 10%;
+  width: 5%;
+}
+
+#reviews-container .user-reveiws {
+  /* border: 1px solid #555555f3; */
+  padding: 0 0 30px 0;
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+}
+
+#reviews-container .user-reveiws .review {
+  /* border: 1px solid #f31717f3; */
+  display: flex;
+  flex-flow: column;
+  gap: 0;
+}
+
+#reviews-container .user-reveiws .review .stars {
+  /* border: 1px solid rgb(226, 43, 43); */
+  display: flex;
+  gap: 5px;
+}
+
+#reviews-container .user-reveiws .review .stars svg {
+  width: 20px;
+  height: 20px;
+  color: rgb(223, 121, 26);
+  fill: rgb(223, 121, 26);
+}
+
+#reviews-container .user-reveiws .review .stars svg path {
+  stroke: none;
+  stroke-width: 0;
+}
+
+#reviews-container .user-reveiws .review  h4.title{
+  /* border: 1px solid #f31717f3; */
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #404040;
+  margin: 10px 0 0 0;
+  display: flex;
+  align-items: start;
+  flex-flow: column;
+  gap: 0;
+}
+
+#reviews-container .user-reveiws .review  p.content {
+  /* border: 1px solid #f31717f3; */
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #404040;
+  line-height: 1.4;
+  margin: 10px 0 0 0;
+  gap: 0;
+}
+
+#reviews-container .user-reveiws .review  span.footer {
+  /* border: 1px solid #f31717f3; */
+  /* font-size: 1.1rem; */
+  margin: 10px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+#reviews-container .user-reveiws .review  span.footer span.left {
+  /* border: 1px solid #f31717f3; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  color: #606060;
+  font-size: 0.9rem;
+}
+
+#reviews-container .user-reveiws .review  span.footer span.right {
+  /* border: 1px solid #f31717f3; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  color: var(--main-color);
+}
+
+#reviews-container .user-reveiws .review  span.footer span.right svg {
+  width: 20px;
+  height: 20px;
+  margin: 3px 0 0 0;
 }
 
 
