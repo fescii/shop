@@ -1032,15 +1032,17 @@ section.product>.full-info>.main #description {
 
 section.product>.full-info .side-tab {
   /* border: 1px solid rgb(123, 255, 0); */
+  padding: 22px 0 0 0;
   width: 300px;
   display: flex;
   flex-flow: column;
+  /* gap: 10px; */
 }
 
 section.product>.full-info .side-tab .title {
-  border-bottom: 1px solid #80808017;
-  background-color: hsl(0, 0%, 98%);
-  padding: 5px 0 0 5px;
+  border-bottom: 1px solid #80808027;
+  /* background-color: hsl(0, 0%, 98%); */
+  padding: 5px 0 3px 5px;
   width: 100%;
   display: flex;
   flex-flow: row;
@@ -1049,7 +1051,7 @@ section.product>.full-info .side-tab .title {
   gap: 10px;
 }
 
-section.product>.full-info .side-tab .title h2.name {
+section.product>.full-info .side-tab > .title h2.name {
   font-size: 1.3rem;
   color: var(--color-two);
   /* letter-spacing: 1px; */
@@ -1057,6 +1059,111 @@ section.product>.full-info .side-tab .title h2.name {
   padding: 0;
   line-height: 1.4;
   font-weight: 570;
+}
+
+section.product>.full-info .side-tab .store {
+  /* border: 1px solid red; */
+  margin: 10px 0 0 0;
+  display: flex;
+  flex-flow: column;
+}
+
+section.product>.full-info .side-tab .store h2.store-name {
+  font-size: 1.2rem;
+  color: #404040;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-weight: 570;
+}
+
+section.product>.full-info .side-tab .store p.info {
+  font-size: 1rem;
+  color: #404040;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+section.product>.full-info .side-tab .contact {
+  /* border: 1px solid red; */
+  margin: 20px 0 0 0;
+  display: flex;
+  flex-flow: column;
+}
+
+section.product>.full-info .side-tab .contact h2 {
+  font-size: 1.1rem;
+  color: #404040;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-weight: 570;
+}
+
+section.product>.full-info .side-tab .contact .contact-details {
+  /* border: 1px solid red; */
+  margin: 10px 0 0 0;
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+}
+
+section.product>.full-info .side-tab .contact .contact-details a {
+  border: 1px solid #80808020;
+  text-decoration: none;
+  padding: 5px 10px 5.5px 15px;
+  color: #606060;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  width: 150px;
+  gap: 10px;
+  border-radius: 50px;
+}
+
+section.product>.full-info .side-tab .contact .contact-details a:hover {
+  color: var(--main-color);
+}
+
+section.product>.full-info .side-tab .share{
+  /* border: 1px solid red; */
+  margin: 20px 0 0 0;
+  display: flex;
+  flex-flow: column;
+}
+
+section.product>.full-info .side-tab .share h2 {
+  font-size: 1.2rem;
+  color: #404040;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+section.product>.full-info .side-tab .share .socials {
+  /* border: 1px solid red; */
+  margin: 10px 0 0 0;
+  display: flex;
+  align-items: start;
+  /* justify-content: center; */
+  gap: 10px;
+}
+
+section.product>.full-info .side-tab .share .socials a {
+  text-decoration: none;
+  color: #606060;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.product>.full-info .side-tab .share .socials a:hover {
+  color: var(--color-two);
 }
 
 
