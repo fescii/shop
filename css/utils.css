@@ -36,7 +36,7 @@ section.search .search-form >.search-items input[type="search"]#search {
   width: 600px;
   height: 40px;
   max-height: 40px;
-  padding-left: 35px;
+  padding-left: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,17 +66,18 @@ section.search .search-form>.search-items input[type="submit"] {
   align-items: center;
   justify-content: center;
   gap: 0;
+  cursor: pointer;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
 
 section.search .search-form>.search-items svg {
   /* border: 1px solid #80808027; */
-  color: var(--main-color);
+  color: #ee8523;
   position: absolute;
-  left: 8px;
-  width: 22px;
-  height: 22px;
+  left: 13px;
+  width: 20px;
+  height: 20px;
 }
 
 section.search .search-form>.search-items svg * {
