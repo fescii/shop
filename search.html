@@ -12,11 +12,19 @@
   <title>Storyteller Arts</title>
 
   <script type="module">
-    //Apps-Modals
-    import ModalBook from "./js/modal.book.js";
+    //Modals
+    import ModalProduct from "./js/modal.product.js";
 
-    //Apps-modals
-    customElements.define("modal-book", ModalBook);
+    //Products
+    import ProductClassic from "./js/product.classic.js";
+    import ProductContainer from "./js/product.container.js";
+
+    //Register Modals
+    customElements.define("modal-product", ModalProduct);
+
+    //Register Products
+    customElements.define("product-classic", ProductClassic);
+    customElements.define("product-container", ProductContainer);
 
   </script>
 
@@ -140,10 +148,10 @@
     <section class="search">
       <form action="#" method="get" class="search-form">
         <div class="search-items">
-          <input type="search" name="search" id="search"  placeholder="Search products">
+          <input type="search" name="search" id="search" placeholder="Search products">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="11.7666" cy="11.7667" r="8.98856" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
+            <circle cx="11.7666" cy="11.7667" r="8.98856" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" />
             <path d="M18.0183 18.4853L21.5423 22.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round" />
           </svg>
@@ -157,9 +165,70 @@
           <a href="#" class="category">Popular</a>
           <a href="#" class="category">Popular</a>
         </div>
+
+        <div class="products-two">
+
+          <product-container product-image="img/explore/shots/shot4.jpg" name="Pinapple Freash" price="33.25">
+          </product-container>
+
+          <product-container product-image="img/product/furits/15.jpg" name="Kropi Jussi" price="30.25">
+          </product-container>
+
+          <product-container product-image="img/product/furits/17.jpg" name="Grean Lemooon" price="42.75">
+          </product-container>
+
+          <product-container product-image="img/product/furits/15.jpg" name="Kropi Jussi" price="30.25">
+          </product-container>
+
+          <product-container product-image="img/product/furits/14.jpg" name="Pinapple Freash" price="33.25">
+          </product-container>
+
+          <product-container product-image="img/product/furits/15.jpg" name="Kropi Jussi" price="30.25">
+          </product-container>
+
+          <product-container product-image="img/product/furits/17.jpg" name="Grean Lemooon" price="42.75">
+          </product-container>
+
+          <product-container product-image="img/product/furits/15.jpg" name="Kropi Jussi" price="30.25">
+          </product-container>
+
+          <product-container product-image="img/product/furits/14.jpg" name="Pinapple Freash" price="33.25">
+          </product-container>
+
+          <product-container product-image="img/explore/shots/shot4.jpg" name="Pinapple Freash" price="33.25">
+          </product-container>
+
+          <product-container product-image="img/product/furits/15.jpg" name="Kropi Jussi" price="30.25">
+          </product-container>
+
+          <product-container product-image="img/product/furits/17.jpg" name="Grean Lemooon" price="42.75">
+          </product-container>
+
+          <product-container product-image="img/product/furits/15.jpg" name="Kropi Jussi" price="30.25">
+          </product-container>
+
+          <product-container product-image="img/product/furits/17.jpg" name="Grean Lemooon" price="42.75">
+          </product-container>
+
+          <product-container product-image="img/product/furits/15.jpg" name="Kropi Jussi" price="30.25">
+          </product-container>
+
+        </div>
+
+        <div class="actions">
+          <a href="" class="action explore">
+            <span class="text">Show more</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 8.50012C19 8.50012 14.856 15.5001 12 15.5001C9.145 15.5001 5 8.50012 5 8.50012"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   </main>
+
+
   <footer class="footer">
     <section class="content">
       <div class="logo-section">

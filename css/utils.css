@@ -30,7 +30,7 @@ section.search .search-form > .search-items {
 }
 
 section.search .search-form >.search-items input[type="search"]#search {
-  border: 2px solid #ee8523;
+  border: 2px solid #85bd02;
   font-size: 0.95rem;
   outline: none;
   width: 600px;
@@ -52,8 +52,8 @@ section.search .search-form>.search-items input[type="search"]#search:focus {
 }
 
 section.search .search-form>.search-items button#submit {
-  border: 2px solid #ee8523;
-  background-color: #ee8523;
+  border: 2px solid #85bd02;
+  background-color: #85bd02;
   color: #ffffff;
   font-size: 1rem;
   font-weight: 500;
@@ -73,7 +73,7 @@ section.search .search-form>.search-items button#submit {
 
 section.search .search-form>.search-items svg {
   /* border: 1px solid #80808027; */
-  color: #ee8523;
+  color: #85bd02;
   position: absolute;
   left: 13px;
   width: 20px;
@@ -108,6 +108,7 @@ section.search .search-results a {
 section.search .search-results .head  a{
   border: 1px solid #80808037;
   text-decoration: none;
+  font-size: 1.15rem;
   padding: 5px 15px;
   color: #404040;
   display: flex;
@@ -117,7 +118,7 @@ section.search .search-results .head  a{
 }
 
 section.search .search-results .head a:hover {
-  color: rgb(223, 121, 26);
+  color: #85bd02;
 }
 
 section.search .search-results .head a.active:hover {
@@ -128,8 +129,8 @@ section.search .search-results .head a.active {
   border: none;
   color: #ffffff;
   /* background: linear-gradient(#53595f, #627ea0); */
-  background: rgb(223, 121, 26);
-  background: linear-gradient(0deg,rgb(223, 121, 26) 0%,rgb(240, 156, 78) 100%);
+  background: #85bd02;
+  background: linear-gradient(0deg,#85bd02 0%,#c2f153 100%);
   background-color: rgb(247, 145, 162);
 }
 
