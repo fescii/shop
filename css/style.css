@@ -1058,6 +1058,8 @@ body>main.main>section.featured {
 	justify-content: space-between;
 	align-items: center;
 	gap: 30px;
+	width: 100%;
+	max-width: 100%;
 	padding: 50px 10% 70px 10%;
 }
 
@@ -1093,8 +1095,9 @@ body>main.main>section.featured>.featured-head>p {
 }
 
 body>main.main>section.featured>div.products {
-	border: 1px solid blue;
+	/* border: 1px solid blue; */
 	width: 100%;
+	min-width: 100%;
 	margin: 0;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1104,15 +1107,43 @@ body>main.main>section.featured>div.products {
 
 body>main.main>section.featured>div.products>.featpro {
 	/* border: 1px solid blue; */
+	text-decoration: none;
 	height: max-content;
 	display: flex;
 	flex-flow: column;
-	align-items: center;
+	gap: 5px;
 	justify-content: center;
 }
 
+body>main.main>section.featured>div.products>.featpro p.name {
+	margin: 5px 0 0 0;
+	line-height: 1.4;
+	color: #6d6d6d;
+	font-weight: 500;
+}
+
+body>main.main>section.featured>div.products>.featpro .price {
+	color: #6d6d6d;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+body>main.main>section.featured>div.products>.featpro .price .now {
+	color: #333333;
+	font-weight: 600;
+}
+
+body>main.main>section.featured>div.products>.featpro .price .was {
+	text-decoration-line: line-through;
+	font-weight: 400;
+	font-size: 0.9rem;
+}
+
 body>main.main>section.featured>div.products>.featpro .cover {
-	border: 1px solid rgb(190, 176, 42);
+	border: 1px solid #80808017;
+	text-decoration: none;
 	height: 270px;
 	width: 250px;
 	position: relative;
@@ -1124,10 +1155,10 @@ body>main.main>section.featured>div.products>.featpro .cover {
 }
 
 body>main.main>section.featured>div.products>.featpro .cover img.image {
-	border: 1px solid rgb(190, 176, 42);
+	/* border: 1px solid rgb(190, 176, 42); */
 	height: 100%;
 	width: 100%;
-	object-fit: cover;
+	object-fit: contain;
 	display: flex;
 	flex-flow: column;
 	align-items: center;
@@ -1152,14 +1183,50 @@ body>main.main>section.featured>div.products>.featpro .cover span.offer {
 }
 
 body>main.main>section.featured>div.products>.featpro .cover .actions {
-	border: 1px solid red;
+	/* border: 1px solid red; */
 	position: absolute;
 	bottom: 0;
+	padding: 0 10px 12px 0;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: end;
-	gap: 10px;
+	gap: 5px;
+}
+
+body>main.main>section.featured>div.products>.featpro .cover .actions .action {
+	background-color: #f1f1f1;
+	color: #313131;
+	font-size: 18px;
+	cursor: pointer;
+	height: 40px;
+	line-height: 44px;
+	margin: 0 2px;
+	transform: scaleY(0);
+	transition: all 0.4s ease-in-out 0s;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+body>main.main>section.featured>div.products>.featpro:hover .cover .actions .action {
+	transform: scaleY(1);
+}
+
+body>main.main>section.featured>div.products>.featpro .cover .actions .action:hover {
+	background-color: #519f10;
+	color: #fff;
+}
+
+body>main.main>section.featured>div.products>.featpro .cover .actions .action svg {
+	width: 22px;
+	height: 22px;
+}
+
+body>main.main>section.featured>div.products>.featpro .cover .actions .action.view svg {
+	width: 20px;
+	height: 20px;
 }
 
 
