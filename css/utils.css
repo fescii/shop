@@ -43,7 +43,12 @@ section.search .search-form >.search-items input[type="search"]#search {
   gap: 0;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
-  color: #dd1717 !important;
+  color: #404040 !important;
+}
+
+section.search .search-form>.search-items input[type="search"]#search:focus {
+  background-color: transparent;
+  color: #404040 !important;
 }
 
 section.search .search-form>.search-items input[type="submit"] {
