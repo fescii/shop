@@ -1092,68 +1092,79 @@ body>main.main>section.featured>.featured-head>p {
 	text-align: center;
 }
 
-body>main.main>section.featured>div.photos {
-	/* border: 1px solid blue; */
-	width: 80%;
+body>main.main>section.featured>div.products {
+	border: 1px solid blue;
+	width: 100%;
 	margin: 0;
 	display: grid;
-	grid-template-columns: 55% 40%;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	column-gap: 30px;
 	row-gap: 30px;
 }
 
-body>main.main>section.featured>div.photos>div.photo {
-	border-radius: 25px;
-	height: 100%;
+body>main.main>section.featured>div.products>.featpro {
+	/* border: 1px solid blue; */
+	height: max-content;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+}
+
+body>main.main>section.featured>div.products>.featpro .cover {
+	border: 1px solid rgb(190, 176, 42);
+	height: 270px;
+	width: 250px;
+	position: relative;
 	overflow: hidden;
 	display: flex;
+	flex-flow: column;
 	align-items: center;
 	justify-content: center;
-	/* background: #fff; */
-	background-position-x: 0%;
-	background-position-y: 0%;
-	background-repeat: repeat;
-	background-image: none;
-	box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.041);
 }
 
-body>main.main>section.featured>div.photos>div.photo>img {
-	width: 100%;
+body>main.main>section.featured>div.products>.featpro .cover img.image {
+	border: 1px solid rgb(190, 176, 42);
 	height: 100%;
+	width: 100%;
 	object-fit: cover;
 	display: flex;
+	flex-flow: column;
 	align-items: center;
 	justify-content: center;
-	border-radius: 25px;
 }
 
-body>main.main>section.featured>div.photos>div.photo.first {
-	/* border: 1px solid rgb(192, 101, 40); */
-	grid-column: 1/2;
-	grid-row: 1/3;
-	height: 250px;
+body>main.main>section.featured>div.products>.featpro .cover span.offer {
+	background-color: #519f10;
+	border-radius: 100px;
+	color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 700;
+	left: 10px;
+	line-height: 1;
+	position: absolute;
+	top: 10px;
+	height: 45px;
+	width: 45px;
+	line-height: 45px;
+	text-align: center;
 }
 
-body>main.main>section.featured>div.photos>div.photo.second {
-	/* border: 1px solid rgb(192, 101, 40); */
-	grid-column: 2/3;
-	grid-row: 1/4;
-	height: 450px;
+body>main.main>section.featured>div.products>.featpro .cover .actions {
+	border: 1px solid red;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	gap: 10px;
 }
 
-body>main.main>section.featured>div.photos>div.photo.third {
-	/* border: 1px solid rgb(192, 101, 40); */
-	grid-column: 1/2;
-	grid-row: 3/6;
-	height: 500px;
-}
 
-body>main.main>section.featured>div.photos>div.photo.forth {
-	/* border: 1px solid rgb(192, 101, 40); */
-	grid-column: 2/3;
-	grid-row: 4/6;
-	height: 300px;
-}
+
+
 
 body>main.main>section.featured>.reserve {
 	/* border: 1px solid rgb(156, 156, 156); */
