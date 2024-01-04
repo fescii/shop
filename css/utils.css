@@ -1,8 +1,8 @@
 /* Search page */
 
 section.search {
-  border: 2px solid #808080;
-  padding: 20px 10% 80px 10%;
+  /* border: 2px solid #808080; */
+  padding: 30px 10% 80px 10%;
   background-color: #ffffff;
   min-height: 80vh;
   display: flex;
@@ -11,7 +11,7 @@ section.search {
 }
 
 section.search .search-form {
-  border: 1px solid #c00f0f;
+  /* border: 1px solid #c00f0f; */
   padding: 20px;
   display: flex;
   flex-flow: column;
@@ -82,6 +82,40 @@ section.search .search-form>.search-items svg {
 
 section.search .search-form>.search-items svg * {
   stroke-width: 2.5;
+}
+
+section.search .search-results {
+  /* border: 1px solid #c00f0f; */
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+section.search .search-results .head {
+  /* border: 1px solid #c00f0f; */
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+section.search .search-results .head  a{
+  border: 1px solid #80808037;
+  text-decoration: none;
+  padding: 5px 15px;
+  color: #404040;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+section.search .search-results .head a.active {
+  border: none;
+  color: #ffffff;
+  background: linear-gradient(#53595f, #627ea0);
 }
 
 
