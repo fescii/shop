@@ -36,7 +36,7 @@ section.search .search-form >.search-items input[type="search"]#search {
   width: 600px;
   height: 40px;
   max-height: 40px;
-  padding-left: 40px;
+  padding: 10px 10px 12px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,13 +55,12 @@ section.search .search-form>.search-items button#submit {
   border: 2px solid #85bd02;
   background-color: #85bd02;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 500;
   height: 40px;
   max-height: 40px;
   padding: auto;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding: 10px 15px 12px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,6 +131,57 @@ section.search .search-results .head a.active {
   background: #85bd02;
   background: linear-gradient(0deg,#85bd02 0%,#c2f153 100%);
   background-color: rgb(247, 145, 162);
+}
+
+section.search .search-results .actions {
+  /* border: 1px solid rgb(156, 156, 156); */
+  margin: 45px 0 0 0;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+section.search .search-results .actions>.action {
+  /* border: 1px solid rgb(156, 156, 156); */
+  padding: 10px 15px;
+  text-decoration: none;
+  font-family: var(--font-alt);
+  font-size: 1.1rem;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+section.search .search-results .actions>.explore {
+  border: 1px solid #8080805d;
+  background-color: #ffffff1f;
+  backdrop-filter: blur(84px);
+  -webkit-backdrop-filter: blur(84px);
+  box-shadow: 8px 8px 100px 0px rgba(42, 67, 113, 0.158);
+  color: var(--color-two);
+}
+
+
+section.search .search-results .action>.explore svg path {
+  fill: #fafafa;
+}
+
+section.search .search-results .actions>.action svg {
+  transition: all 0.3s linear;
+}
+
+section.search .search-results .actions >.action:hover {
+  padding: 10px 20px;
+  font-weight: 500;
+  gap: 15px;
 }
 
 
