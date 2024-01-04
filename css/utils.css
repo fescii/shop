@@ -101,6 +101,10 @@ section.search .search-results .head {
   gap: 20px;
 }
 
+section.search .search-results a {
+  transition: all 300ms ease;
+}
+
 section.search .search-results .head  a{
   border: 1px solid #80808037;
   text-decoration: none;
@@ -112,10 +116,21 @@ section.search .search-results .head  a{
   border-radius: 50px;
 }
 
+section.search .search-results .head a:hover {
+  color: rgb(223, 121, 26);
+}
+
+section.search .search-results .head a.active:hover {
+  color: #ffffff;
+}
+
 section.search .search-results .head a.active {
   border: none;
   color: #ffffff;
-  background: linear-gradient(#53595f, #627ea0);
+  /* background: linear-gradient(#53595f, #627ea0); */
+  background: rgb(223, 121, 26);
+  background: linear-gradient(0deg,rgb(223, 121, 26) 0%,rgb(240, 156, 78) 100%);
+  background-color: rgb(247, 145, 162);
 }
 
 
