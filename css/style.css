@@ -767,8 +767,8 @@ body>main.main>section.landing>.content-one>.image>img {
 	/* width: 600px; */
 }
 
-body>main.main>section.services {
-	/* border: 1px solid blue; */
+body>main.main>section.banners {
+	border: 1px solid blue;
 	background-color: #ffffff;
 	margin: 0;
 	display: flex;
@@ -785,7 +785,7 @@ body>main.main>section.services.last {
 	padding: 50px 10% 50px 10%;
 }
 
-body>main.main>section.services>.services-head {
+.services-head {
 	/* border: 1px solid blue; */
 	width: 500px;
 	margin: 0;
@@ -802,7 +802,62 @@ body>main.main>section.services.last>.services-head {
 	gap: 30px;
 }
 
-body>main.main>section.services>.services-head>h2.title {
+body>main.main>section.banners > .banners-container{
+	/* border: 1px solid blue; */
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+body>main.main>section.banners>.banners-container .single-banner {
+	border: 1px solid rgb(255, 51, 0);
+	width: 50%;
+	overflow: hidden;
+	position: relative;
+}
+
+body>main.main>section.banners>.banners-container .single-banner a {
+	display: block;
+}
+
+body>main.main>section.banners>.banners-container .single-banner img {
+	transition: all 1.5s ease 0s;
+	width: 100%;
+	vertical-align: middle;
+}
+
+body>main.main>section.banners>.banners-container .single-banner .banner-content {
+	left: 35px;
+	position: absolute;
+	right: 0;
+	text-align: left;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+body>main.main>section.banners>.banners-container .single-banner .banner-content>h4 {
+	color: #fff;
+	font-family: 'Lora', serif;
+	font-size: 38px;
+	color: #519f10;
+	font-weight: 500;
+	margin: 0 0 10px;
+	text-transform: capitalize;
+}
+
+body>main.main>section.banners>.banners-container .single-banner .banner-content h5 {
+	color: #484848;
+	/* font-family: "Montserrat", sans-serif; */
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+
+
+
+.services-head>h2.title {
 	margin: 0;
 	font-family: var(--font-alt);
 	line-height: 1.2;
@@ -812,7 +867,7 @@ body>main.main>section.services>.services-head>h2.title {
 	color: #404040;
 }
 
-body>main.main>section.services>.services-head>p {
+.services-head>p {
 	margin: 0;
 	font-family: var(--font-alt);
 	font-size: 1rem;
@@ -822,7 +877,12 @@ body>main.main>section.services>.services-head>p {
 	text-align: center;
 }
 
-body>main.main>section.services>.guaranteed {
+
+
+
+
+
+.guaranteed {
 	margin: 20px 0 0 0;
 	width: 100%;
 	display: flex;
@@ -832,7 +892,7 @@ body>main.main>section.services>.guaranteed {
 	gap: 20px;
 }
 
-body>main.main>section.services>.guaranteed>.service {
+.guaranteed>.service {
 	/* border: 1px solid blue; */
 	overflow: hidden;
 	position: relative;
@@ -847,33 +907,33 @@ body>main.main>section.services>.guaranteed>.service {
 	transition: all 0.3s linear;
 }
 
-body>main.main>section.services>.guaranteed>.service:hover {
+.guaranteed>.service:hover {
 	margin: -15px 0 0 0;
 }
 
-body>main.main>section.services>.guaranteed>.service.box1 {
+.guaranteed>.service.box1 {
 	background-image: url(/img/back/bg-service1-1.png);
 	background-position: top right;
 	background-repeat: no-repeat;
 }
 
-body>main.main>section.services>.guaranteed>.service.box2 {
+.guaranteed>.service.box2 {
 	background-image: url(/img/back/bg-service2-1.png);
 	background-position: bottom right;
 	background-repeat: no-repeat;
 }
 
-body>main.main>section.services>.guaranteed>.service.box3 {
+.guaranteed>.service.box3 {
 	background-image: url(/img/back/bg-service3-1.png);
 	background-position: top right;
 	background-repeat: no-repeat;
 }
 
-body>main.main>section.services>.guaranteed>.service .content-box {
+.guaranteed>.service .content-box {
 	padding-left: 59px;
 }
 
-body>main.main>section.services>.guaranteed>.service .content-box h5 {
+.guaranteed>.service .content-box h5 {
 	font-weight: 700;
 	/* font-family: var(--font-alt); */
 	color: #404040;
@@ -881,7 +941,7 @@ body>main.main>section.services>.guaranteed>.service .content-box h5 {
 	margin: 0 0 8px 0;
 }
 
-body>main.main>section.services>.guaranteed>.service .content-box p {
+.guaranteed>.service .content-box p {
 	margin: 0;
 	color: #606060;
 	font-family: var(--font-alt);
@@ -890,7 +950,7 @@ body>main.main>section.services>.guaranteed>.service .content-box p {
 	font-weight: 400;
 }
 
-body>main.main>section.services>.guaranteed>.service .number-box {
+.guaranteed>.service .number-box {
 	float: left;
 	width: 50px;
 	height: 50px;
@@ -901,92 +961,22 @@ body>main.main>section.services>.guaranteed>.service .number-box {
 	border-radius: 50%;
 }
 
-body>main.main>section.services>.guaranteed>.service.box1 .number-box {
+.guaranteed>.service.box1 .number-box {
 	color: #00c3ff;
 	background: rgba(0, 195, 255, 0.15);
 }
 
-body>main.main>section.services>.guaranteed>.service.box2 .number-box {
+.guaranteed>.service.box2 .number-box {
 	color: #0160e7;
 	background-color: rgba(1, 96, 231, 0.152);
 }
 
-body>main.main>section.services>.guaranteed>.service.box3 .number-box {
+.guaranteed>.service.box3 .number-box {
 	color: #fe4c1c;
 	background-color: rgba(254, 76, 28, 0.154);
 }
 
-body>main.main>section.services>.our-services {
-	margin: 20px 0 0 0;
-	width: 100%;
-	display: flex;
-	flex-flow: row;
-	justify-content: space-between;
-	align-items: center;
-	gap: 20px;
-}
-
-body>main.main>section.services>.our-services>.service {
-	border: 1px solid #80808017;
-	overflow: hidden;
-	position: relative;
-	padding: 25px 20px;
-	background: #ffffff;
-	background-position-x: 0%;
-	background-position-y: 0%;
-	background-repeat: repeat;
-	background-image: none;
-	box-shadow: 5px 5px 20px 0px rgba(42, 67, 113, 0.014);
-	border-radius: 15px;
-	display: flex;
-	flex-flow: column;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.3s linear;
-}
-
-body>main.main>section.services>.our-services>.service span.icon {
-	/* border: 1px solid blue; */
-	height: 50px;
-	width: 50px;
-	min-height: 50px;
-	min-width: 50px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-body>main.main>section.services>.our-services>.service span.icon i {
-	font-size: 2.3rem;
-	color: #00c3ff;
-}
-
-body>main.main>section.services>.our-services>.service span.icon svg {
-	width: 25px;
-	height: 25px;
-	color: #00c3ff;
-}
-
-body>main.main>section.services>.our-services>.service h2.title {
-	/* border: 1px solid blue; */
-	margin: 10px 0;
-	color: #404040;
-	font-size: 1.2rem;
-	font-family: var(--font-alt);
-	font-weight: 500;
-	text-align: center;
-}
-
-body>main.main>section.services>.our-services>.service p.description {
-	/* border: 1px solid blue; */
-	margin: 0;
-	color: #808080;
-	font-size: 0.9rem;
-	font-weight: 400;
-	text-align: center;
-}
-
-body>main.main>section.services>.reserve {
+.reserve {
 	/* border: 1px solid rgb(156, 156, 156); */
 	margin: 25px 0 0 0;
 	display: flex;
@@ -996,7 +986,7 @@ body>main.main>section.services>.reserve {
 	width: 50%;
 }
 
-body>main.main>section.services>.reserve>h2.title {
+.reserve>h2.title {
 	color: #404040;
 	font-family: var(--font-alt);
 	margin: 15px 0 10px 0;
@@ -1005,7 +995,7 @@ body>main.main>section.services>.reserve>h2.title {
 	font-weight: 500;
 }
 
-body>main.main>section.services>.reserve>p {
+.reserve>p {
 	color: #747474;
 	font-family: var(--font-alt);
 	margin: 0 0 20px 0;
@@ -1014,7 +1004,7 @@ body>main.main>section.services>.reserve>p {
 	font-size: 1rem;
 }
 
-body>main.main>section.services>.reserve>.shop {
+.reserve>.shop {
 	/* border: 1px solid rgb(156, 156, 156); */
 	padding: 10px 15px;
 	text-decoration: none;
@@ -1031,16 +1021,16 @@ body>main.main>section.services>.reserve>.shop {
 	transition: all 0.3s linear;
 }
 
-body>main.main>section.services>.reserve>.shop svg {
+.reserve>.shop svg {
 	transition: all 0.3s linear;
 }
 
-body>main.main>section.services>.reserve>.shop:hover {
+.reserve>.shop:hover {
 	padding: 10px 25px;
 	gap: 15px;
 }
 
-body>main.main>section.services>.reserve>.shop {
+.reserve>.shop {
 	background: rgb(223, 121, 26);
 	background: linear-gradient(0deg,
 			rgb(223, 121, 26) 0%,
@@ -1156,6 +1146,7 @@ body>main.main>section.featured>div.products>.featpro .cover {
 
 body>main.main>section.featured>div.products>.featpro .cover img.image {
 	/* border: 1px solid rgb(190, 176, 42); */
+	background-color: #ffffff;
 	height: 100%;
 	width: 100%;
 	object-fit: contain;
@@ -1196,7 +1187,7 @@ body>main.main>section.featured>div.products>.featpro .cover .actions {
 
 body>main.main>section.featured>div.products>.featpro .cover .actions .action {
 	background-color: #f1f1f1;
-	color: #313131;
+	color: #404040;
 	font-size: 18px;
 	cursor: pointer;
 	height: 40px;
