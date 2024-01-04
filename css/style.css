@@ -1036,10 +1036,8 @@ body>main.main>section.services.last>.services-head {
 }
 
 .reserve>.shop {
-	background: rgb(223, 121, 26);
-	background: linear-gradient(0deg,
-			rgb(223, 121, 26) 0%,
-			rgb(240, 156, 78) 100%);
+	background: #85bd02;
+	background: linear-gradient(0deg, #85bd02 0%, #c2f153 100%);
 	background-color: rgb(247, 145, 162);
 	color: #ffffff;
 }
@@ -1293,11 +1291,9 @@ body>main.main>section.featured>.reserve .actions>.action:hover {
 }
 
 body>main.main>section.featured>.reserve .actions>.action.shop{
-	background: rgb(223, 121, 26);
-	background: linear-gradient(0deg,
-			rgb(223, 121, 26) 0%,
-			rgb(240, 156, 78) 100%);
-	background-color: rgb(247, 145, 162);
+	background: #85bd02;
+  background: linear-gradient(0deg,#85bd02 0%,#c2f153 100%);
+  background-color: rgb(247, 145, 162);
 	color: #ffffff;
 }
 
