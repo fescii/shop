@@ -51,7 +51,7 @@ section.search .search-form>.search-items input[type="search"]#search:focus {
   color: #404040 !important;
 }
 
-section.search .search-form>.search-items input[type="submit"] {
+section.search .search-form>.search-items button#submit {
   border: 2px solid #ee8523;
   background-color: #ee8523;
   color: #ffffff;
