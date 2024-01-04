@@ -768,7 +768,7 @@ body>main.main>section.landing>.content-one>.image>img {
 }
 
 body>main.main>section.banners {
-	border: 1px solid blue;
+	/* border: 1px solid blue; */
 	background-color: #ffffff;
 	margin: 0;
 	display: flex;
@@ -776,13 +776,8 @@ body>main.main>section.banners {
 	justify-content: space-between;
 	align-items: center;
 	gap: 30px;
-	padding: 50px 10% 70px 10%;
-}
-
-body>main.main>section.services.last {
-	background-color: transparent;
-	margin: 0 0 70px 0;
-	padding: 50px 10% 50px 10%;
+	min-height: 90vh;
+	padding: 70px 10% 70px 10%;
 }
 
 .services-head {
@@ -796,11 +791,6 @@ body>main.main>section.services.last {
 	gap: 10px;
 }
 
-body>main.main>section.services.last>.services-head {
-	/* border: 1px solid blue; */
-	width: 70%;
-	gap: 30px;
-}
 
 body>main.main>section.banners > .banners-container{
 	/* border: 1px solid blue; */
@@ -808,11 +798,12 @@ body>main.main>section.banners > .banners-container{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	gap: 30px;
 }
 
 body>main.main>section.banners>.banners-container .single-banner {
-	border: 1px solid rgb(255, 51, 0);
-	width: 50%;
+	/* border: 1px solid rgb(255, 51, 0); */
+	width: calc(50% - 15px);
 	overflow: hidden;
 	position: relative;
 }
@@ -825,6 +816,10 @@ body>main.main>section.banners>.banners-container .single-banner img {
 	transition: all 1.5s ease 0s;
 	width: 100%;
 	vertical-align: middle;
+}
+
+body>main.main>section.banners>.banners-container .single-banner:hover img {
+	transform: scale(1.15);
 }
 
 body>main.main>section.banners>.banners-container .single-banner .banner-content {
@@ -855,8 +850,6 @@ body>main.main>section.banners>.banners-container .single-banner .banner-content
 }
 
 
-
-
 .services-head>h2.title {
 	margin: 0;
 	font-family: var(--font-alt);
@@ -877,10 +870,22 @@ body>main.main>section.banners>.banners-container .single-banner .banner-content
 	text-align: center;
 }
 
+body>main.main>section.services.last {
+	background-color: transparent;
+	margin: 0 0 70px 0;
+	padding: 50px 10% 50px 10%;
+	gap: 30px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+}
 
-
-
-
+body>main.main>section.services.last>.services-head {
+	/* border: 1px solid blue; */
+	width: 70%;
+	gap: 30px;
+}
 
 .guaranteed {
 	margin: 20px 0 0 0;
@@ -1221,9 +1226,6 @@ body>main.main>section.featured>div.products>.featpro .cover .actions .action.vi
 }
 
 
-
-
-
 body>main.main>section.featured>.reserve {
 	/* border: 1px solid rgb(156, 156, 156); */
 	margin: 25px 0 0 0;
@@ -1303,8 +1305,11 @@ body>main.main>section.featured>.reserve .actions>.action.shopsvg path {
 	fill: #ffffff;
 }
 
-/* EXPLORE */
 
+
+
+
+/* EXPLORE */
 body>main.main>section.content {
 	padding: 70px 10% 50px 10%;
 	margin: 0;
