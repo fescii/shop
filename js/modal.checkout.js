@@ -196,7 +196,7 @@ export default class ModalCheckout extends HTMLElement {
   }
 
   validateInputs(data, stepValue, contentContainer) {
-
+    data.UserData = {}
     const hideError = (element) => {
       setTimeout(() => {
         element.style.display = 'none'
@@ -205,35 +205,73 @@ export default class ModalCheckout extends HTMLElement {
 
     const container = this.shadowObj.querySelector("section#content > .container > .fields")
 
-    const name = container.querySelector('.field.name>input'),
-      phone = container.querySelector('.field.phone input'),
-      email = container.querySelector('.field.email>input'),
-      other = container.querySelector('.field.other textarea');
+    const inputs = container.querySelectorAll('.field input')
+    if (inputs) {
+      let next = true;
+      inputs.forEach(input => {
+        switch (input.dataset.type) {
+          case 'name':
+            if (input.value.length < 3) {
+              next = false;
+              const errSpan = input.parentElement.querySelector('.error')
+              errSpan.style.display = 'flex'
+              hideError(errSpan)
+            }
+            else {
+              data.UserData[`${input.dataset.name}`] = input.value
+            }
+            break;
+          
+          case 'number':
+            if (input.value.length < 9 || input.value.length > 10) {
+              next = false;
+              const errSpan = input.parentElement.parentElement.querySelector('.error')
+              errSpan.style.display = 'flex'
+              hideError(errSpan)
+            }
+            else if (input.value.length === 10 || input.value[0] === "0") {
+              next = false;
+              const errSpan = input.parentElement.parentElement.querySelector('.error')
+              errSpan.textContent = "Don't start with 0, start with 7 or 1";
+              errSpan.style.display = 'flex'
+              hideError(errSpan)
+            }
+            else {
+              data.UserData[`${input.dataset.name}`] = input.value
+            }
+          default:
+            break;
+        }
+      });
 
-    if (name.value.length > 5) {
-      if (phone.value.length > 7) {
-        if (email.value.length > 5) {
-          data.Client = { 'name': name.value, 'phone': phone.value, 'email': email.value, 'other': other.value }
-          stepValue.textContent = 2;
-          contentContainer.innerHTML = this.getStepTwo()
-          this.activateStepTwo()
-        }
-        else {
-          const errSpan = container.querySelector('.field.email .error')
-          errSpan.style.display = 'flex'
-          hideError(errSpan)
-        }
-      }
-      else {
-        const errSpan = container.querySelector('.field.phone .error')
+      const countySelect = this.shadowObj.querySelector("section#content > .container > .fields  .field #county");
+      const subCountySelect = this.shadowObj.querySelector("section#content > .container > .fields  .field #subCounty");
+
+      if (countySelect.value.length < 1) {
+        next = false;
+        const errSpan = countySelect.parentElement.querySelector('.error')
         errSpan.style.display = 'flex'
         hideError(errSpan)
       }
-    }
-    else {
-      const errSpan = container.querySelector('.field.name .error')
-      errSpan.style.display = 'flex'
-      hideError(errSpan)
+      else {
+        data.UserData[`${countySelect.dataset.name}`] = countySelect.value
+      }
+
+      if (subCountySelect.value.length < 1) {
+        next = false;
+        const errSpan = subCountySelect.parentElement.querySelector('.error')
+        errSpan.style.display = 'flex'
+        hideError(errSpan)
+      }
+      else {
+        data.UserData[`${subCountySelect.dataset.name}`] = subCountySelect.value
+      }
+
+      if (next) {
+        stepValue.textContent = 2;
+        contentContainer.innerHTML = this.getStepTwo()
+        this.activateStepTwo()
+      }
     }
   }
 
@@ -292,12 +330,12 @@ export default class ModalCheckout extends HTMLElement {
           ${this.getStepOne()}
         </div>
         <div class="footer">
-          <!-- <div class="action prev">
+          <div class="action prev">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4992 19.7504C15.3692 19.7504 15.2382 19.7174 15.1182 19.6464C14.3642 19.1994 7.75024 15.1914 7.75024 12.0004C7.75024 8.81043 14.3632 4.80143 15.1182 4.35443C15.4732 4.14343 15.9352 4.26143 16.1452 4.61843C16.3562 4.97543 16.2382 5.43543 15.8822 5.64643C13.3182 7.16543 9.25024 10.2334 9.25024 12.0004C9.25024 13.7704 13.3182 16.8374 15.8822 18.3544C16.2382 18.5654 16.3562 19.0254 16.1452 19.3824C16.0052 19.6184 15.7562 19.7504 15.4992 19.7504Z" fill="black"/>
             </svg>
-            <span class="text">Previous</span>
-          </div> -->
+            <span class="text">Cancel</span>
+          </div>
           <div class="action next">
             <span class="text">Next</span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -321,12 +359,12 @@ export default class ModalCheckout extends HTMLElement {
         <div class="field name">
           <div class="input-group">
             <label for="firstname">First Name</label>
-            <input type="text" name="firstname" id="firstname" placeholder="Your first name" required>
+            <input data-name="first_name" data-type="name" type="text" name="firstname" id="firstname" placeholder="Your first name" required>
             <span class="error">Name is required</span>
           </div>
           <div class="input-group">
             <label for="lastname">Last Name</label>
-            <input type="text" name="lastname" id="lastname" placeholder="Your last name" required>
+            <input data-name="last_name"  data-type="name" type="text" name="lastname" id="lastname" placeholder="Your last name" required>
             <span class="error">Name is required</span>
           </div>
         </div>
@@ -335,27 +373,35 @@ export default class ModalCheckout extends HTMLElement {
             <label for="phone">Phone Number</label>
             <span class="wrapper">
               <span class="country">+254</span>
-              <input type="text" name="number" id="number" placeholder="Phone number" required>
+              <input data-name="phone"  data-type="number" type="text" name="number" id="number" placeholder="Phone number" required>
             </span>
             <span class="error">Phone is required</span>
           </div>
           <div class="input-group">
-            <label for="firstname">Email</label>
-            <input type="text" name="email" id="email" placeholder="Your email" required>
+            <label for="email">Email</label>
+            <input data-name="email" data-type="name" type="email" name="email" id="email" placeholder="Your email" required>
             <span class="error">Email is required</span>
           </div>
         </div>
         <div class="field location">
           <div class="input-group">
-            <label for="county">County:</label>
-            <select id="county" onchange="updateSubCounties()">
+            <label for="county">County</label>
+            <select data-name="county" id="county">
                 <!-- Counties dropdown will be populated dynamically -->
             </select>
-            <span class="error">Phone is required</span>
+            <span class="error">County is required</span>
           </div>
           <div class="input-group">
-            <label for="subCounty">Sub-County:</label>
-            <select id="subCounty"></select>
+            <label for="subCounty">Sub-County</label>
+            <select data-name="sub_county" id="subCounty"></select>
+            <span class="error">Sub-County is required</span>
+          </div>
+        </div>
+        <div class="field address">
+          <div class="input-group">
+            <label for="postal">Address/Postal</label>
+            <input data-name="address" data-type="name" type="text" name="postal" id="postal" placeholder="Address/Postal Code/Town/Apartment" required>
+            <span class="error">Address/Postal is required</span>
           </div>
         </div>
       </form>
@@ -800,9 +846,9 @@ export default class ModalCheckout extends HTMLElement {
         padding: 20px 0 10px 0;
         display: flex;
         flex-flow: row;
-        /* justify-content: space-between; */
+        justify-content: space-between;
         align-items: center;
-        justify-content: center; 
+        /* justify-content: center;  */
         justify-self: end;
       }
 
@@ -896,7 +942,7 @@ export default class ModalCheckout extends HTMLElement {
         flex-flow: column;
         justify-content: center;
         align-items: start;
-        gap: 15px;
+        gap: 20px;
       }
 
       section#content > .container > .fields > .field {
@@ -909,6 +955,7 @@ export default class ModalCheckout extends HTMLElement {
         gap: 2px;
       }
 
+      section#content > .container > .fields  .field.location,
       section#content > .container > .fields  .field.contact,
       section#content > .container > .fields  .field.name {
         /* border: 1px solid black; */
@@ -996,14 +1043,17 @@ export default class ModalCheckout extends HTMLElement {
       }
 
       section#content > .container > .fields  .field select {
+        font-size: 1rem;
         width: 100%;
-        padding: 8px;
-        margin-bottom: 10px;
+        height: 40px;
+        outline: none;
+        padding: 10px 12px;
         border: 1px solid #80808017;
         border-radius: 4px;
         box-sizing: border-box;
         background-color: #fefefe;
         color: #404040;
+        border-radius: 12px;
       }
 
       select:hover {
