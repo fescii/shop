@@ -199,7 +199,7 @@ export default class ModalCheckout extends HTMLElement {
     data.UserData = {}
     const hideError = (element) => {
       setTimeout(() => {
-        element.style.display = 'no'
+        element.style.display = 'none'
       }, 2000);
     }
 
