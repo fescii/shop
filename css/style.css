@@ -1131,11 +1131,11 @@ section.featured div#products-container .head>h4.title {
 
 
 section.featured div#products-container .head svg {
-	margin: 10px 0 0 0;
+	margin: 8px 0 0 0;
 	font-family: var(--font-alt);
 	line-height: 1.2;
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 	color: #404040;
 	/* letter-spacing: 4px; */
 }
