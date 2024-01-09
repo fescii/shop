@@ -1,23 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const bookBtns = document.querySelectorAll('#book-now')
-  const modalContainer = document.querySelector('div#modal-container')
-  const modal = `
-    <modal-book
-      url="/good/"
-      id="1"
-    >
-    </modal-book>
-  `
-  if (bookBtns) {
-    bookBtns.forEach(bookBtn => {
-      bookBtn.addEventListener('click', (e) => {
-        e.stopPropagation()
-        e.preventDefault()
-        modalContainer.innerHTML = modal
-        // console.log('clicked')
-        // modalContainer.insertAdjacentElement('beforeend', modal)
+  const categories = document.querySelectorAll('section.featured div#products-container .category')
+  if (categories) {
+    categories.forEach(category => {
+      let productsContainer = category.querySelector('.products')
+      let nextBtn = category.querySelector('.nav#right-nav')
+      let prevBtn = category.querySelector('.nav#left-nav')
+
+      nextBtn.addEventListener('click', ev => {
+        ev.preventDefault()
+        ev.stopPropagation()
+
+        productsContainer.scrollBy({
+          left: 300,
+          behavior: "smooth"
+        })
       })
-    });				
+
+      prevBtn.addEventListener('click', ev => {
+        ev.stopPropagation()
+        ev.preventDefault()
+
+        productsContainer.scrollBy({
+          left: -300,
+          behavior: "smooth"
+        })
+      })
+    })			
   }
 
   const video = document.querySelector("video#background-video");
