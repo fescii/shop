@@ -1087,18 +1087,77 @@ body>main.main>section.featured>.featured-head>p {
 	text-align: center;
 }
 
-body>main.main>section.featured>div.products {
+section.featured div#products-container {
 	/* border: 1px solid blue; */
 	width: 100%;
 	min-width: 100%;
+	max-width: 100%;
+	margin: 0;
+	display: flex;
+	flex-flow: column;
+	gap: 45px;
+}
+
+section.featured div#products-container .category {
+	/* border: 1px solid rgb(255, 174, 0); */
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+	margin: 0;
+	display: flex;
+	flex-flow: column;
+	gap: 20px;
+}
+
+section.featured div#products-container .category .head {
+	/* border: 1px solid blue; */
+	width: 100%;
+	margin: 0;
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+	gap: 2px;
+}
+
+section.featured div#products-container .head>h4.title {
+	margin: 0;
+	font-family: var(--font-alt);
+	line-height: 1.2;
+	font-size: 1.8rem;
+	font-weight: 500;
+	color: #404040;
+	/* letter-spacing: 4px; */
+}
+
+
+section.featured div#products-container .head svg {
+	margin: 10px 0 0 0;
+	font-family: var(--font-alt);
+	line-height: 1.2;
+	width: 30px;
+	height: 30px;
+	color: #404040;
+	/* letter-spacing: 4px; */
+}
+
+section.featured div#products-container .head svg path {
+	stroke-width: 2.0;
+}
+
+section.featured div#products-container div.products {
+	/* border: 1px solid blue; */
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
 	margin: 0;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	column-gap: 30px;
-	row-gap: 30px;
+	column-gap: 20px;
+	row-gap: 20px;
 }
 
-body>main.main>section.featured>div.products>.featpro {
+
+section.featured div#products-container div.products>.featpro {
 	/* border: 1px solid blue; */
 	text-decoration: none;
 	height: max-content;
@@ -1108,14 +1167,14 @@ body>main.main>section.featured>div.products>.featpro {
 	justify-content: center;
 }
 
-body>main.main>section.featured>div.products>.featpro p.name {
+section.featured div#products-container div.products>.featpro p.name {
 	margin: 5px 0 0 0;
 	line-height: 1.4;
 	color: #6d6d6d;
 	font-weight: 500;
 }
 
-body>main.main>section.featured>div.products>.featpro .price {
+section.featured div#products-container div.products>.featpro .price {
 	color: #6d6d6d;
 	font-weight: 500;
 	display: flex;
@@ -1123,22 +1182,22 @@ body>main.main>section.featured>div.products>.featpro .price {
 	gap: 10px;
 }
 
-body>main.main>section.featured>div.products>.featpro .price .now {
+section.featured div#products-container div.products>.featpro .price .now {
 	color: #333333;
 	font-weight: 600;
 }
 
-body>main.main>section.featured>div.products>.featpro .price .was {
+section.featured div#products-container div.products>.featpro .price .was {
 	text-decoration-line: line-through;
 	font-weight: 400;
 	font-size: 0.9rem;
 }
 
-body>main.main>section.featured>div.products>.featpro .cover {
+section.featured div#products-container div.products>.featpro .cover {
 	border: 1px solid #80808017;
 	text-decoration: none;
 	height: 270px;
-	width: 250px;
+	width: 240px;
 	position: relative;
 	overflow: hidden;
 	display: flex;
@@ -1147,7 +1206,7 @@ body>main.main>section.featured>div.products>.featpro .cover {
 	justify-content: center;
 }
 
-body>main.main>section.featured>div.products>.featpro .cover img.image {
+section.featured div#products-container div.products>.featpro .cover img.image {
 	/* border: 1px solid rgb(190, 176, 42); */
 	background-color: #ffffff;
 	height: 100%;
@@ -1159,7 +1218,7 @@ body>main.main>section.featured>div.products>.featpro .cover img.image {
 	justify-content: center;
 }
 
-body>main.main>section.featured>div.products>.featpro .cover span.offer {
+section.featured div#products-container div.products>.featpro .cover span.offer {
 	background-color: #519f10;
 	border-radius: 100px;
 	color: #fff;
@@ -1176,7 +1235,7 @@ body>main.main>section.featured>div.products>.featpro .cover span.offer {
 	text-align: center;
 }
 
-body>main.main>section.featured>div.products>.featpro .cover .actions {
+section.featured div#products-container div.products>.featpro .cover .actions {
 	/* border: 1px solid red; */
 	position: absolute;
 	bottom: 0;
@@ -1188,7 +1247,7 @@ body>main.main>section.featured>div.products>.featpro .cover .actions {
 	gap: 5px;
 }
 
-body>main.main>section.featured>div.products>.featpro .cover .actions .action {
+section.featured div#products-container div.products>.featpro .cover .actions .action {
 	background-color: #f1f1f1;
 	color: #404040;
 	font-size: 18px;
@@ -1204,21 +1263,21 @@ body>main.main>section.featured>div.products>.featpro .cover .actions .action {
 	justify-content: center;
 }
 
-body>main.main>section.featured>div.products>.featpro:hover .cover .actions .action {
+section.featured div#products-container div.products>.featpro:hover .cover .actions .action {
 	transform: scaleY(1);
 }
 
-body>main.main>section.featured>div.products>.featpro .cover .actions .action:hover {
+section.featured div#products-container div.products>.featpro .cover .actions .action:hover {
 	background-color: #519f10;
 	color: #fff;
 }
 
-body>main.main>section.featured>div.products>.featpro .cover .actions .action svg {
+section.featured div#products-container div.products>.featpro .cover .actions .action svg {
 	width: 22px;
 	height: 22px;
 }
 
-body>main.main>section.featured>div.products>.featpro .cover .actions .action.view svg {
+section.featured div#products-container div.products>.featpro .cover .actions .action.view svg {
 	width: 20px;
 	height: 20px;
 }
@@ -1297,7 +1356,7 @@ body>main.main>section.featured>.reserve .actions>.action.shop{
 	color: #ffffff;
 }
 
-body>main.main>section.featured>.reserve .actions>.action.shopsvg path {
+body>main.main>section.featured>.reserve .actions>.action.shop svg path {
 	fill: #ffffff;
 }
 
