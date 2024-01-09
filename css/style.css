@@ -1095,7 +1095,7 @@ section.featured div#products-container {
 	margin: 0;
 	display: flex;
 	flex-flow: column;
-	gap: 45px;
+	gap: 50px;
 }
 
 section.featured div#products-container .category {
