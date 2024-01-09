@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     })			
   }
 
-  const video = document.querySelector("video#background-video");
-  if (video) {
-    video.playbackRate = 0.5;
-  }
+  // const video = document.querySelector("video#background-video");
+  // if (video) {
+  //   video.playbackRate = 0.5;
+  // }
 
 
   // Slider
