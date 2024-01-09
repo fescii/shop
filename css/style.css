@@ -1100,12 +1100,15 @@ section.featured div#products-container {
 
 section.featured div#products-container .category {
 	/* border: 1px solid rgb(255, 174, 0); */
+	position: relative;
 	width: 100%;
 	min-width: 100%;
 	max-width: 100%;
 	margin: 0;
 	display: flex;
 	flex-flow: column;
+	align-items: center;
+	justify-content: center;
 	gap: 20px;
 }
 
@@ -1145,20 +1148,14 @@ section.featured div#products-container .head svg path {
 }
 
 section.featured div#products-container div.products {
-	border: 1px solid blue;
+	/* border: 1px solid blue; */
 	width: 100%;
+	max-width: 100%;
 	margin: 0;
-	/* display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	column-gap: 20px;
-	row-gap: 20px;
-	align-items: center;
-	justify-content: space-around; */
 	display: flex;
 	align-items: center;
 	justify-content: start;
 	gap: 20px;
-	max-width: 100%;
 	overflow-x: scroll;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
@@ -1168,6 +1165,49 @@ section.featured div#products-container div.products::-webkit-scrollbar {
 	display: none !important;
 	visibility: hidden;
 }
+
+section.featured div#products-container .category .nav {
+	/* border: 1px solid #80808017; */
+	position: absolute;
+	z-index: 3;
+	left: 8px;
+	width: 30px;
+	height: 30px;
+	display: none;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	cursor: pointer;
+	border-radius: 50px;
+	box-shadow: 8px 8px 100px 0px rgba(42, 67, 113, 0.158);
+	background: linear-gradient(#53595f, #627ea0);
+	/* background: #85bd02;
+  background: linear-gradient(0deg,#85bd02 0%,#c2f153 100%);
+  background-color: rgb(247, 145, 162); */
+}
+
+section.featured div#products-container .category:hover > .nav {
+	display: flex;
+}
+
+section.featured div#products-container .category .nav#right-nav {
+	/* border: 1px solid #80808017; */
+	position: absolute;
+	left: unset;
+	right: 8px;
+}
+
+section.featured div#products-container .category .nav > svg {
+	/* rotate: -90deg; */
+	width: 22px;
+	height: 22px;
+	stroke-width: 1.8;
+}
+
+
+
+
 
 
 body>main.main>section.featured>.reserve {
