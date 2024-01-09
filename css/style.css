@@ -1099,7 +1099,7 @@ section.featured div#products-container {
 }
 
 section.featured div#products-container .category {
-	border: 1px solid rgb(255, 174, 0);
+	/* border: 1px solid rgb(255, 174, 0); */
 	width: 100%;
 	min-width: 100%;
 	max-width: 100%;
@@ -1110,7 +1110,7 @@ section.featured div#products-container .category {
 }
 
 section.featured div#products-container .category .head {
-	border: 1px solid blue;
+	/* border: 1px solid blue; */
 	width: 100%;
 	margin: 0;
 	display: flex;
@@ -1158,133 +1158,6 @@ section.featured div#products-container div.products {
 	justify-content: space-around;
 }
 
-
-section.featured div#products-container div.products>.featpro {
-	/* border: 1px solid blue; */
-	text-decoration: none;
-	height: max-content;
-	display: flex;
-	flex-flow: column;
-	width: 215px;
-	max-width: 215px;
-	gap: 5px;
-	justify-content: center;
-}
-
-section.featured div#products-container div.products>.featpro p.name {
-	margin: 5px 0 0 0;
-	line-height: 1.4;
-	color: #6d6d6d;
-	font-weight: 500;
-}
-
-section.featured div#products-container div.products>.featpro .price {
-	color: #6d6d6d;
-	font-weight: 500;
-	display: flex;
-	align-items: center;
-	gap: 10px;
-}
-
-section.featured div#products-container div.products>.featpro .price .now {
-	color: #333333;
-	font-weight: 600;
-}
-
-section.featured div#products-container div.products>.featpro .price .was {
-	text-decoration-line: line-through;
-	font-weight: 400;
-	font-size: 0.9rem;
-}
-
-section.featured div#products-container div.products>.featpro .cover {
-	border: 1px solid #80808017;
-	text-decoration: none;
-	height: 230px;
-	width: 215px;
-	position: relative;
-	overflow: hidden;
-	display: flex;
-	flex-flow: column;
-	align-items: center;
-	justify-content: center;
-}
-
-section.featured div#products-container div.products>.featpro .cover img.image {
-	/* border: 1px solid rgb(190, 176, 42); */
-	background-color: #ffffff;
-	height: 100%;
-	width: 100%;
-	object-fit: contain;
-	display: flex;
-	flex-flow: column;
-	align-items: center;
-	justify-content: center;
-}
-
-section.featured div#products-container div.products>.featpro .cover span.offer {
-	background-color: #519f10;
-	border-radius: 100px;
-	color: #fff;
-	display: inline-block;
-	font-size: 12px;
-	font-weight: 700;
-	left: 10px;
-	line-height: 1;
-	position: absolute;
-	top: 10px;
-	height: 45px;
-	width: 45px;
-	line-height: 45px;
-	text-align: center;
-}
-
-section.featured div#products-container div.products>.featpro .cover .actions {
-	/* border: 1px solid red; */
-	position: absolute;
-	bottom: 0;
-	padding: 0 10px 12px 0;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: end;
-	gap: 5px;
-}
-
-section.featured div#products-container div.products>.featpro .cover .actions .action {
-	background-color: #f1f1f1;
-	color: #404040;
-	font-size: 18px;
-	cursor: pointer;
-	height: 40px;
-	line-height: 44px;
-	margin: 0 2px;
-	transform: scaleY(0);
-	transition: all 0.4s ease-in-out 0s;
-	width: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-section.featured div#products-container div.products>.featpro:hover .cover .actions .action {
-	transform: scaleY(1);
-}
-
-section.featured div#products-container div.products>.featpro .cover .actions .action:hover {
-	background-color: #519f10;
-	color: #fff;
-}
-
-section.featured div#products-container div.products>.featpro .cover .actions .action svg {
-	width: 22px;
-	height: 22px;
-}
-
-section.featured div#products-container div.products>.featpro .cover .actions .action.view svg {
-	width: 20px;
-	height: 20px;
-}
 
 
 body>main.main>section.featured>.reserve {

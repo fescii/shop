@@ -91,7 +91,7 @@ export default class ProductItem extends HTMLElement {
         height: max-content;
         display: flex;
         flex-flow: column;
-        width: 215px;
+        width: 230px;
         max-width: 215px;
         gap: 5px;
         justify-content: center;
@@ -126,8 +126,8 @@ export default class ProductItem extends HTMLElement {
       .cover {
         border: 1px solid #80808017;
         text-decoration: none;
-        height: 230px;
-        width: 215px;
+        height: 250px;
+        width: 230px;
         position: relative;
         overflow: hidden;
         display: flex;
