@@ -1099,7 +1099,7 @@ section.featured div#products-container {
 }
 
 section.featured div#products-container .category {
-	/* border: 1px solid rgb(255, 174, 0); */
+	border: 1px solid rgb(255, 174, 0);
 	width: 100%;
 	min-width: 100%;
 	max-width: 100%;
@@ -1110,7 +1110,7 @@ section.featured div#products-container .category {
 }
 
 section.featured div#products-container .category .head {
-	/* border: 1px solid blue; */
+	border: 1px solid blue;
 	width: 100%;
 	margin: 0;
 	display: flex;
@@ -1123,7 +1123,7 @@ section.featured div#products-container .head>h4.title {
 	margin: 0;
 	font-family: var(--font-alt);
 	line-height: 1.2;
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	font-weight: 500;
 	color: #404040;
 	/* letter-spacing: 4px; */
@@ -1134,8 +1134,8 @@ section.featured div#products-container .head svg {
 	margin: 8px 0 0 0;
 	font-family: var(--font-alt);
 	line-height: 1.2;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	color: #404040;
 	/* letter-spacing: 4px; */
 }
@@ -1145,7 +1145,7 @@ section.featured div#products-container .head svg path {
 }
 
 section.featured div#products-container div.products {
-	/* border: 1px solid blue; */
+	border: 1px solid blue;
 	width: 100%;
 	min-width: 100%;
 	max-width: 100%;
@@ -1154,6 +1154,8 @@ section.featured div#products-container div.products {
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	column-gap: 20px;
 	row-gap: 20px;
+	align-items: center;
+	justify-content: space-around;
 }
 
 
