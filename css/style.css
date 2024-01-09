@@ -1147,17 +1147,27 @@ section.featured div#products-container .head svg path {
 section.featured div#products-container div.products {
 	border: 1px solid blue;
 	width: 100%;
-	min-width: 100%;
-	max-width: 100%;
 	margin: 0;
-	display: grid;
+	/* display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	column-gap: 20px;
 	row-gap: 20px;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-around; */
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	gap: 20px;
+	max-width: 100%;
+	overflow-x: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
 
+section.featured div#products-container div.products::-webkit-scrollbar {
+	display: none !important;
+	visibility: hidden;
+}
 
 
 body>main.main>section.featured>.reserve {
