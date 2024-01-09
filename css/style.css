@@ -1163,6 +1163,8 @@ section.featured div#products-container div.products>.featpro {
 	height: max-content;
 	display: flex;
 	flex-flow: column;
+	width: 215px;
+	max-width: 215px;
 	gap: 5px;
 	justify-content: center;
 }
@@ -1196,8 +1198,8 @@ section.featured div#products-container div.products>.featpro .price .was {
 section.featured div#products-container div.products>.featpro .cover {
 	border: 1px solid #80808017;
 	text-decoration: none;
-	height: 270px;
-	width: 240px;
+	height: 230px;
+	width: 215px;
 	position: relative;
 	overflow: hidden;
 	display: flex;
@@ -1356,9 +1358,9 @@ body>main.main>section.featured>.reserve .actions>.action.shop{
 	color: #ffffff;
 }
 
-body>main.main>section.featured>.reserve .actions>.action.shop svg path {
+/* body>main.main>section.featured>.reserve .actions>.action.shop svg path {
 	fill: #ffffff;
-}
+} */
 
 
 
