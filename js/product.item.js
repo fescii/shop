@@ -46,7 +46,7 @@ export default class ProductItem extends HTMLElement {
     return `
       <a href="" class="cover">
 				<span class="offer">-30%</span>
-				<img src="img/product/product-1.webp" alt="Product Image" class="image">
+				<img src="${this.getAttribute('image')}" alt="Product Image" class="image">
 				<div class="actions">
 				  <span class="action wishlist" title="Wishlist">
 						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
