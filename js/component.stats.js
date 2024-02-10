@@ -50,11 +50,6 @@ export default class StatContainer extends HTMLElement {
           ${this.getAnalytics()}
         </div>
       </div>
-      <div class="upcoming">
-        <div class="bookings">
-          ${this.getUpcoming()}
-        </div>
-      </div>
     `
   }
 
@@ -155,23 +150,6 @@ export default class StatContainer extends HTMLElement {
     `
   }
 
-  getUpcoming(){
-    return `
-      <div class="booking">
-        <div class="date">
-          <span class="day">Mon</span>
-          <span class="no">20</span>
-        </div>
-        <div class="info">
-          <p class="title">Nakuru showgrounds</p>
-          <span class="by">Fredrick Ochieng</span>
-          <span class="time">10:00</span>
-        </div>
-        <div class="up">Up next</div>
-      </div>
-    `
-  }
-
 
   getStyles() {
     return `
@@ -181,15 +159,17 @@ export default class StatContainer extends HTMLElement {
       }
 
       :host {
-        /* border: 1px solid #808080; */
+        /*border: 1px solid #808080;*/
         width: 100%;
+        min-height: 85vh;
+        height: max-content;
         margin: 0;
         padding: 0;
         display: flex;
         flex-flow: column;
-        /* align-items: center; */
-        justify-content: start;
-        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        gap: 35px;
       }
 
       .top {
@@ -478,118 +458,9 @@ export default class StatContainer extends HTMLElement {
       }
 
       .body > .right .analytic > .icon svg path {
-      fill: #404040;
+        fill: #404040;
       }
 
-      .upcoming {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: space-around;
-        gap: 0;
-      }
-
-      .upcoming > .bookings {
-        /* border: 1px solid #808080; */
-        margin: 0;
-        width: 100%;
-        padding: 20px;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: space-around;
-        gap: 0;
-      }
-
-
-      .upcoming > .bookings .booking {
-        border: 1px solid #80808027;
-        position: relative;
-        padding: 20px;
-        width: 90%;
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        gap: 17px;
-        background: #fff;
-        background-position-x: 0%;
-        background-position-y: 0%;
-        background-repeat: repeat;
-        background-image: none;
-        box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.034);
-        border-radius: 15px;
-      }
-
-      .upcoming > .bookings .booking > .info {
-        /* border: 1px solid #808080; */
-        margin: 0;
-        display: flex;
-        flex-flow: column;
-        gap: 0;
-      }
-
-      .upcoming > .bookings .booking > .info  p {
-        margin: 0;
-        color: #404040;
-        font-family: var(--font-alt);
-        font-weight: 500;
-        /* font-size: 1.1rem; */
-      }
-
-      .upcoming > .bookings .booking > .info  span {
-        margin: 0;
-        color: #808080;
-        font-family: var(--font-alt);
-        font-size: 0.85rem;
-      }
-
-      .upcoming > .bookings .booking > .info  span.time {
-        font-size: 0.8rem;
-      }
-
-      .upcoming > .bookings .booking > .date {
-        /* border: 1px solid #808080; */
-        background-color: #099eef18;
-        padding: 10px 15px;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: center;
-        gap: 3px;
-        border-radius: 15px;
-      }
-
-      .upcoming > .bookings .booking > .date > span.day {
-        margin: 0;
-        color: #808080;
-        font-family: var(--font-alt);
-        font-size: 0.9rem;
-        line-height: 1;
-      }
-
-      .upcoming > .bookings .booking > .date >  span.no {
-        margin: 0;
-        display: inline-block;
-        color:  #08b86f;
-        font-family: var(--font-alt);
-        font-weight: 500;
-        font-size: 1.6rem;
-        line-height: 1;
-      }
-
-
-      .upcoming > .bookings .booking > .up {
-        position: absolute;
-        right: 20px;
-        color: #808080;
-        font-family: var(--font-alt);
-        font-size: 1rem;
-        line-height: 1;
-      }
-    
-      
     </style>
     `
   }
