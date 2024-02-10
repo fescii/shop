@@ -35,7 +35,7 @@ export default class StatContainer extends HTMLElement {
         <h1 class="number">${this.getAttribute('items')}</h1>
         <div class="other">
           <p class="name">Products</p>
-          <span class="text">Bought since ${this.getAttribute('date')}</span>
+          <span class="text">Ordered since <i>${this.getAttribute('date')}</i></span>
         </div>
       </div>
       <div class="body">
@@ -77,21 +77,17 @@ export default class StatContainer extends HTMLElement {
         <div class="card upcoming">
           <span class="logo">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.30894 6.06056C4.08225 7.28714 3.49976 9.33927 3.49976 12.7757C3.49976 16.2121 4.08225 18.2643 5.30894 19.4909C6.53564 20.7175 8.58779 21.2997 12.0238 21.2997C15.4602 21.2997 17.5126 20.7174 18.7395 19.4908C19.9663 18.2643 20.5488 16.2121 20.5488 12.7757C20.5488 9.33927 19.9663 7.28716 18.7395 6.06059C17.5126 4.83397 15.4602 4.25171 12.0238 4.25171C8.58779 4.25171 6.53564 4.83397 5.30894 6.06056ZM4.24832 4.99986C5.91987 3.32845 8.50472 2.75171 12.0238 2.75171C15.5433 2.75171 18.1284 3.32844 19.8 4.99983C21.4718 6.67126 22.0488 9.25615 22.0488 12.7757C22.0488 16.2953 21.4718 18.8802 19.8 20.5516C18.1284 22.223 15.5433 22.7997 12.0238 22.7997C8.50472 22.7997 5.91987 22.223 4.24832 20.5516C2.57676 18.8801 1.99976 16.2953 1.99976 12.7757C1.99976 9.25614 2.57676 6.67127 4.24832 4.99986Z" fill="black"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.27515 9.3241C2.27515 8.90988 2.61093 8.5741 3.02515 8.5741H21.0331C21.4474 8.5741 21.7831 8.90988 21.7831 9.3241C21.7831 9.73831 21.4474 10.0741 21.0331 10.0741H3.02515C2.61093 10.0741 2.27515 9.73831 2.27515 9.3241Z" fill="black"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6785 13.2611C15.6785 12.8469 16.0143 12.5111 16.4285 12.5111H16.4375C16.8517 12.5111 17.1875 12.8469 17.1875 13.2611C17.1875 13.6753 16.8517 14.0111 16.4375 14.0111H16.4285C16.0143 14.0111 15.6785 13.6753 15.6785 13.2611Z" fill="black"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2791 13.2611C11.2791 12.8469 11.6148 12.5111 12.0291 12.5111H12.0381C12.4523 12.5111 12.7881 12.8469 12.7881 13.2611C12.7881 13.6753 12.4523 14.0111 12.0381 14.0111H12.0291C11.6148 14.0111 11.2791 13.6753 11.2791 13.2611Z" fill="black"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.87134 13.2611C6.87134 12.8469 7.20712 12.5111 7.62134 12.5111H7.63034C8.04455 12.5111 8.38034 12.8469 8.38034 13.2611C8.38034 13.6753 8.04455 14.0111 7.63034 14.0111H7.62134C7.20712 14.0111 6.87134 13.6753 6.87134 13.2611Z" fill="black"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6785 17.113C15.6785 16.6988 16.0143 16.363 16.4285 16.363H16.4375C16.8517 16.363 17.1875 16.6988 17.1875 17.113C17.1875 17.5273 16.8517 17.863 16.4375 17.863H16.4285C16.0143 17.863 15.6785 17.5273 15.6785 17.113Z" fill="black"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2791 17.113C11.2791 16.6988 11.6148 16.363 12.0291 16.363H12.0381C12.4523 16.363 12.7881 16.6988 12.7881 17.113C12.7881 17.5273 12.4523 17.863 12.0381 17.863H12.0291C11.6148 17.863 11.2791 17.5273 11.2791 17.113Z" fill="black"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.87134 17.113C6.87134 16.6988 7.20712 16.363 7.62134 16.363H7.63034C8.04455 16.363 8.38034 16.6988 8.38034 17.113C8.38034 17.5273 8.04455 17.863 7.63034 17.863H7.62134C7.20712 17.863 6.87134 17.5273 6.87134 17.113Z" fill="black"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.033 1.30017C16.4472 1.30017 16.783 1.63596 16.783 2.05017V5.31217C16.783 5.72638 16.4472 6.06217 16.033 6.06217C15.6187 6.06217 15.283 5.72638 15.283 5.31217V2.05017C15.283 1.63596 15.6187 1.30017 16.033 1.30017Z" fill="black"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.02466 1.30017C8.43887 1.30017 8.77466 1.63596 8.77466 2.05017V5.31217C8.77466 5.72638 8.43887 6.06217 8.02466 6.06217C7.61044 6.06217 7.27466 5.72638 7.27466 5.31217V2.05017C7.27466 1.63596 7.61044 1.30017 8.02466 1.30017Z" fill="black"/>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M4.24342 4.24354C5.91119 2.57576 8.49002 2.00024 12.0001 2.00024C15.5102 2.00024 18.0891 2.57576 19.7568 4.24354C21.4246 5.91132 22.0001 8.49015 22.0001 12.0002C22.0001 15.5103 21.4246 18.0892 19.7568 19.7569C18.0891 21.4247 15.5102 22.0002 12.0001 22.0002C8.49002 22.0002 5.91119 21.4247 4.24342 19.7569C2.57564 18.0892 2.00012 15.5103 2.00012 12.0002C2.00012 8.49015 2.57564 5.91132 4.24342 4.24354ZM5.30408 5.3042C4.0811 6.52717 3.50012 8.57334 3.50012 12.0002C3.50012 15.4271 4.0811 17.4733 5.30408 18.6963C6.52705 19.9193 8.57322 20.5002 12.0001 20.5002C15.427 20.5002 17.4732 19.9193 18.6962 18.6963C19.9191 17.4733 20.5001 15.4271 20.5001 12.0002C20.5001 8.57334 19.9191 6.52717 18.6962 5.3042C17.4732 4.08123 15.427 3.50024 12.0001 3.50024C8.57322 3.50024 6.52705 4.08123 5.30408 5.3042Z"
+                fill="currentColor" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M11.9993 6.88428C12.4135 6.88428 12.7493 7.22006 12.7493 7.63428V11.5694L15.7745 13.3742C16.1302 13.5864 16.2466 14.0468 16.0344 14.4025C15.8221 14.7582 15.3617 14.8746 15.006 14.6624L11.615 12.6394C11.3882 12.504 11.2493 12.2594 11.2493 11.9953V7.63428C11.2493 7.22006 11.5851 6.88428 11.9993 6.88428Z"
+                fill="currentColor" />
             </svg>
           </span>
-          <p class="title">Upcoming</p>
+          <p class="title">Pending</p>
           <div class="date">
-            <span class="no">${this.getAttribute('upcoming')}</span>
+            <span class="no">${this.getAttribute('pending')}</span>
             <span class="date">${this.getAttribute('date')}</span>
           </div>
         </div>
@@ -333,6 +329,7 @@ export default class StatContainer extends HTMLElement {
         border: 1px solid #e7e7e7;
         padding: 15px 20px;
         display: flex;
+        width: 150px;
         flex-flow: column;
         align-items: center;
         justify-content: center;
@@ -358,27 +355,27 @@ export default class StatContainer extends HTMLElement {
         height: 30px;
       }
 
-      .body > .left .cards > .card.completed .logo { 
+      .body > .left .cards > .card.completed .logo {
         background-color: #099eef18;
       }
 
-      .body > .left .cards > .card.completed .logo svg path { 
+      .body > .left .cards > .card.completed .logo svg path {
         fill: #08b86f;
       }
 
-      .body > .left .cards > .card.upcoming .logo { 
+      .body > .left .cards > .card.upcoming .logo {
         background-color: #ffcc004c;
       }
 
-      .body > .left .cards > .card.upcoming .logo svg path { 
+      .body > .left .cards > .card.upcoming .logo svg path {
         fill: #ff9500;
       }
 
-      .body > .left .cards > .card.cancelled .logo { 
+      .body > .left .cards > .card.cancelled .logo {
         background-color: #fb482c19;
       }
 
-      .body > .left .cards > .card.cancelled .logo svg path { 
+      .body > .left .cards > .card.cancelled .logo svg path {
         fill: #f84125;
       }
 
@@ -386,7 +383,7 @@ export default class StatContainer extends HTMLElement {
         margin: 0;
         font-family: var(--font-alt);
         font-size: 1rem;
-        letter-spacing: 2px;
+        letter-height: 1.4;
         font-weight: 500;
         color: #404040;
       }

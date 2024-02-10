@@ -22,7 +22,7 @@ const populateContent = (contentContainer, tab) => {
   switch (tab) {
     case 'overview':
       contentContainer.innerHTML = `
-        <stat-container bookings="163" date="Sep 23" completed="57" upcoming="33" cancelled="8" visitors="1,400"
+        <stat-container items="163" date="2023" completed="57" pending="33" cancelled="8" visitors="1,400"
           interactions="1,360">
         </stat-container>
       `
