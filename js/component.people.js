@@ -65,11 +65,9 @@ export default class PeopleContainer extends HTMLElement {
   getBody() {
     return `
       ${this.getHeader()}
-        
       <div id="content-container" class="content">
         ${this.getPeople()}
       </div>
-     
     `
   }
 

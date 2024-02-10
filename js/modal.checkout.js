@@ -58,7 +58,6 @@ export default class ModalCheckout extends HTMLElement {
       "Wajir": ["Eldas", "Tarbaj", "Wajir East", "Wajir North", "Wajir South", "Wajir West"],
       "West Pokot": ["Kacheliba", "Pokot Central", "Pokot North", "Pokot South"],
     };
-
   }
 
 
@@ -221,7 +220,6 @@ export default class ModalCheckout extends HTMLElement {
               data.UserData[`${input.dataset.name}`] = input.value
             }
             break;
-          
           case 'number':
             if (input.value.length < 9 || input.value.length > 10) {
               next = false;
@@ -1065,7 +1063,6 @@ export default class ModalCheckout extends HTMLElement {
         border-color: #555;
       }
 
-      
       section#content > .container > .fields  .field  textarea:focus{
         border: 1px solid #08b86f60;
       }

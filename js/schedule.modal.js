@@ -9,6 +9,56 @@ export default class ScheduleModal extends HTMLElement {
 
     this.render();
 
+    this.countiesData = {
+      "Baringo": ["Baringo Central", "Baringo North", "Baringo South", "Eldama Ravine", "Mogotio", "Tiaty"],
+      "Bomet": ["Bomet Central", "Bomet East", "Chepalungu", "Sotik"],
+      "Bungoma": ["Bumula", "Bungoma East", "Bungoma North", "Bungoma South", "Bungoma West", "Cheptais", "Kanduyi", "Kimilili", "Mount Elgon", "Sirisia", "Tongaren"],
+      "Busia": ["Budalang'i", "Bunyala", "Butula", "Nambale", "Samia"],
+      "Elgeyo-Marakwet": ["Keiyo North", "Keiyo South", "Marakwet East", "Marakwet West"],
+      "Embu": ["Manyatta", "Mbeere North", "Mbeere South", "Runyenjes"],
+      "Garissa": ["Balambala", "Dadaab", "Fafi", "Garissa Township", "Hulugho", "Ijara"],
+      "Homa Bay": ["Homa Bay Town", "Kasipul", "Kabondo Kasipul", "Karachuonyo", "Ndhiwa", "Rangwe", "Suba"],
+      "Isiolo": ["Isiolo North", "Isiolo South"],
+      "Kajiado": ["Kajiado Central", "Kajiado East", "Kajiado North", "Kajiado West"],
+      "Kakamega": ["Butere", "Kakamega Central", "Kakamega East", "Kakamega North", "Kakamega South", "Lugari", "Malava", "Matungu", "Mumias East", "Mumias West"],
+      "Kericho": ["Ainamoi", "Belgut", "Bureti", "Kipkelion East", "Kipkelion West"],
+      "Kiambu": ["Gatundu North", "Gatundu South", "Juja", "Kabete", "Kiambaa", "Kiambu Town", "Kikuyu", "Lari", "Limuru", "Ruiru", "Thika"],
+      "Kilifi": ["Ganze", "Kaloleni", "Kilifi North", "Kilifi South", "Magarini", "Malindi", "Rabai"],
+      "Kirinyaga": ["Gichugu", "Kirinyaga Central", "Kirinyaga East", "Kirinyaga West", "Mwea"],
+      "Kisii": ["Bobasi", "Bomachoge Borabu", "Bonchari", "Kitutu Chache North", "Kitutu Chache South", "Nyamache", "South Mugirango"],
+      "Kisumu": ["Kisumu Central", "Kisumu East", "Kisumu West", "Seme", "Nyando", "Muhoroni", "Nyakach"],
+      "Kitui": ["Kitui Central", "Kitui East", "Kitui Rural", "Kitui South", "Kitui West", "Mwingi Central", "Mwingi North", "Mwingi West"],
+      "Kwale": ["Kinango", "Lunga Lunga", "Matuga"],
+      "Laikipia": ["Laikipia East", "Laikipia North", "Laikipia West"],
+      "Lamu": ["Lamu East", "Lamu West"],
+      "Machakos": ["Athi River", "Kangundo", "Kathiani", "Machakos", "Masinga", "Matungulu", "Mavoko", "Mwala", "Yatta"],
+      "Makueni": ["Kaiti", "Kibwezi East", "Kibwezi West", "Kilome", "Makueni", "Mbooni"],
+      "Mandera": ["Banisa", "Lafey", "Mandera East", "Mandera North", "Mandera South", "Mandera West"],
+      "Marsabit": ["Laisamis", "Marsabit Central", "Moyale", "North Horr", "Saku"],
+      "Meru": ["Buuri", "Igembe Central", "Igembe North", "Igembe South", "Imenti Central", "Imenti North", "Imenti South", "Meru Central", "Meru South", "Tharaka"],
+      "Migori": ["Kuria East", "Kuria West", "Migori", "Nyatike", "Rongo", "Suna East", "Suna West"],
+      "Mombasa": ["Changamwe", "Jomvu", "Kisauni", "Likoni", "Mvita", "Nyali"],
+      "Murang'a": ["Gatanga", "Kahuro", "Kandara", "Kangema", "Kigumo", "Kiharu", "Mathioya", "Murang'a South"],
+      "Nairobi": ["Dagoretti", "Embakasi", "Kamukunji", "Kasarani", "Lang'ata", "Makadara", "Mathare", "Nairobi West"],
+      "Nakuru": ["Gilgil", "Kuresoi North", "Kuresoi South", "Molo", "Naivasha", "Nakuru East", "Nakuru North", "Nakuru West", "Njoro", "Rongai", "Subukia"],
+      "Nandi": ["Aldai", "Chesumei", "Emgwen", "Mosop", "Nandi Central", "Tinderet"],
+      "Narok": ["Narok East", "Narok North", "Narok South", "Narok West", "Trans Mara East", "Trans Mara West"],
+      "Nyamira": ["Borabu", "Manga", "Masaba North", "Masaba South", "Nyamira North", "Nyamira South"],
+      "Nyandarua": ["Kipipiri", "Ndaragwa", "Ol Kalou"],
+      "Nyeri": ["Kieni East", "Kieni West", "Mathira East", "Mathira West", "Mukurweini", "Nyeri South", "Tetu"],
+      "Samburu": ["Samburu Central", "Samburu East", "Samburu North"],
+      "Siaya": ["Alego Usonga", "Gem", "Rarieda", "Siaya", "Ugenya", "Ugunja"],
+      "Taita-Taveta": ["Mwatate", "Taveta", "Voi"],
+      "Tana River": ["Bura", "Garsen"],
+      "Tharaka-Nithi": ["Chuka", "Igambang'ombe", "Maara", "Tharaka"],
+      "Trans Nzoia": ["Cherang'any", "Endebess", "Kwanza", "Saboti", "Sirisia"],
+      "Turkana": ["Loima", "Turkana Central", "Turkana East", "Turkana North", "Turkana South"],
+      "Uasin Gishu": ["Ainabkoi", "Kapseret", "Kesses", "Moiben", "Soy", "Turbo"],
+      "Vihiga": ["Emuhaya", "Hamisi", "Luanda", "Sabatia", "Vihiga"],
+      "Wajir": ["Eldas", "Tarbaj", "Wajir East", "Wajir North", "Wajir South", "Wajir West"],
+      "West Pokot": ["Kacheliba", "Pokot Central", "Pokot North", "Pokot South"],
+    };
+
   }
 
 
@@ -18,12 +68,10 @@ export default class ScheduleModal extends HTMLElement {
   }
 
   connectedCallback() {
-    console.log('We are inside connectedCallback');
-    
-    console.log('duhcudcucuygryc');
-    
+    // console.log('We are inside connectedCallback');
     this.disableScroll()
-
+    this.populateCountiesDropdown()
+    this.updateSubCounties()
 
     const exitModal = this.shadowObj.querySelector('#content .content-head > .actions > .control')
     const overlay = this.shadowObj.querySelector('div.overlay')
@@ -68,6 +116,128 @@ export default class ScheduleModal extends HTMLElement {
     window.onscroll = function () { };
   }
 
+  populateCountiesDropdown() {
+    const countySelect = this.shadowObj.querySelector("section#content > .container > .fields  .field #county");
+    const subCountySelect = this.shadowObj.querySelector("section#content > .container > .fields  .field #subCounty");
+    for (let county in this.countiesData) {
+      let option = document.createElement("option");
+      option.value = county;
+      option.text = county;
+      countySelect.add(option);
+    }
+
+    let selectedCounty = countySelect.value;
+
+    subCountySelect.innerHTML = "";
+
+    this.countiesData[selectedCounty].forEach(subCounty => {
+      let option = document.createElement("option");
+      option.value = subCounty;
+      option.text = subCounty;
+      subCountySelect.add(option);
+    });
+  }
+
+  updateSubCounties() {
+    const self = this;
+    const countySelect = this.shadowObj.querySelector("section#content > .container > .fields  .field #county");
+    countySelect.addEventListener('change', e => {
+      e.preventDefault()
+      e.stopPropagation()
+
+      const subCountySelect = this.shadowObj.querySelector("section#content > .container > .fields  .field #subCounty");
+      let selectedCounty = countySelect.value;
+
+      subCountySelect.innerHTML = "";
+
+      self.countiesData[selectedCounty].forEach(subCounty => {
+        let option = document.createElement("option");
+        option.value = subCounty;
+        option.text = subCounty;
+        subCountySelect.add(option);
+      });
+    })
+  }
+
+  validateInputs(data, contentContainer) {
+    data.UserData = {}
+    const hideError = (element) => {
+      setTimeout(() => {
+        element.style.display = 'none'
+      }, 2000);
+    }
+
+    const container = this.shadowObj.querySelector("section#content > .container > .fields")
+
+    const inputs = container.querySelectorAll('.field input')
+    if (inputs) {
+      let next = true;
+      inputs.forEach(input => {
+        switch (input.dataset.type) {
+          case 'name':
+            if (input.value.length < 3) {
+              next = false;
+              const errSpan = input.parentElement.querySelector('.error')
+              errSpan.style.display = 'flex'
+              hideError(errSpan)
+            }
+            else {
+              data.UserData[`${input.dataset.name}`] = input.value
+            }
+            break;
+          case 'number':
+            if (input.value.length < 9 || input.value.length > 10) {
+              next = false;
+              const errSpan = input.parentElement.parentElement.querySelector('.error')
+              errSpan.style.display = 'flex'
+              hideError(errSpan)
+            }
+            else if (input.value.length === 10 || input.value[0] === "0") {
+              next = false;
+              const errSpan = input.parentElement.parentElement.querySelector('.error')
+              errSpan.textContent = "Don't start with 0, start with 7 or 1";
+              errSpan.style.display = 'flex'
+              hideError(errSpan)
+            }
+            else {
+              data.UserData[`${input.dataset.name}`] = input.value
+            }
+          default:
+            break;
+        }
+      });
+
+      const countySelect = this.shadowObj.querySelector("section#content > .container > .fields  .field #county");
+      const subCountySelect = this.shadowObj.querySelector("section#content > .container > .fields  .field #subCounty");
+
+      if (countySelect.value.length < 1) {
+        next = false;
+        const errSpan = countySelect.parentElement.querySelector('.error')
+        errSpan.style.display = 'flex'
+        hideError(errSpan)
+      }
+      else {
+        data.UserData[`${countySelect.dataset.name}`] = countySelect.value
+      }
+
+      if (subCountySelect.value.length < 1) {
+        next = false;
+        const errSpan = subCountySelect.parentElement.querySelector('.error')
+        errSpan.style.display = 'flex'
+        hideError(errSpan)
+      }
+      else {
+        data.UserData[`${subCountySelect.dataset.name}`] = subCountySelect.value
+      }
+
+      if (next) {
+        stepValue.textContent = 2;
+        contentContainer.innerHTML = this.getStepTwo()
+        this.activateStepTwo()
+      }
+    }
+  }
+
   activateContent(){
     // console.log('Inside')
     const options = this.shadowObj.querySelectorAll("section#content > .container > .services > .options > .option")
@@ -84,18 +254,16 @@ export default class ScheduleModal extends HTMLElement {
       // The shadow DOM is not created yet, return an empty string or handle it as needed.
       return '';
     }
-  
     // Show HTML Here
     return `
       <div class="overlay"></div>
       <section id="content" class="content">
-        ${this.getHeader()}
         <div id="container" class="container">
-          ${this.getContent()}
+          ${this.getForm()}
         </div>
         <div class="footer">
           <div class="action next">
-            <span class="text">Schedule</span>
+            <span class="text">Save</span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8.50076 19.7504C8.63076 19.7504 8.76176 19.7174 8.88176 19.6464C9.63576 19.1994 16.2498 15.1914 16.2498 12.0004C16.2498 8.81043 9.63676 4.80143 8.88176 4.35443C8.52676 4.14343 8.06476 4.26143 7.85476 4.61843C7.64375 4.97543 7.76176 5.43543 8.11776 5.64643C10.6818 7.16543 14.7498 10.2334 14.7498 12.0004C14.7498 13.7704 10.6818 16.8374 8.11776 18.3544C7.76176 18.5654 7.64375 19.0254 7.85476 19.3824C7.99476 19.6184 8.24376 19.7504 8.50076 19.7504Z" fill="black"/>
             </svg>
@@ -107,53 +275,65 @@ export default class ScheduleModal extends HTMLElement {
   }
 
 
-  getHeader(){
+  getForm() {
     return `
-      <div class="content-head">
-        <div class="actions">
-          <span class="control">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-            </svg>
-          </span>
-          <span class="steps">
-            <span class="text">Scheduling</span>
-          </span>
-        </div>
+      <div class="head">
+        <h2 class="step-title">Your Information</h2>
+        <p class="description">
+          Please fill in the informatiom about your delivery address.
+        </p>
       </div>
-    `
-  }
-
-  getContent() {
-    return `
-      ${this.getTop(this.getAttribute('edit'))}
-      <div class="fields">
+      <form class="fields">
         <div class="field name">
-          ${this.getInput(this.getAttribute('edit'))}
-          <span class="error">Date is required</span>
+          <div class="input-group">
+            <label for="firstname">First Name</label>
+            <input data-name="first_name" data-type="name" type="text" name="firstname" id="firstname" placeholder="Your first name" required>
+            <span class="error">Name is required</span>
+          </div>
+          <div class="input-group">
+            <label for="lastname">Last Name</label>
+            <input data-name="last_name"  data-type="name" type="text" name="lastname" id="lastname" placeholder="Your last name" required>
+            <span class="error">Name is required</span>
+          </div>
         </div>
-      </div>
-      <div class="services">
-        <div class="options">
-          ${this.getOptions(this.getAttribute('edit'))}
+        <div class="field contact">
+          <div class="input-group">
+            <label for="phone">Phone Number</label>
+            <span class="wrapper">
+              <span class="country">+254</span>
+              <input data-name="phone"  data-type="number" type="text" name="number" id="number" placeholder="Phone number" required>
+            </span>
+            <span class="error">Phone is required</span>
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input data-name="email" data-type="name" type="email" name="email" id="email" placeholder="Your email" required>
+            <span class="error">Email is required</span>
+          </div>
         </div>
-      </div>
+        <div class="field location">
+          <div class="input-group">
+            <label for="county">County</label>
+            <select data-name="county" id="county">
+                <!-- Counties dropdown will be populated dynamically -->
+            </select>
+            <span class="error">County is required</span>
+          </div>
+          <div class="input-group">
+            <label for="subCounty">Sub-County</label>
+            <select data-name="sub_county" id="subCounty"></select>
+            <span class="error">Sub-County is required</span>
+          </div>
+        </div>
+        <div class="field address">
+          <div class="input-group">
+            <label for="postal">Address/Postal</label>
+            <input data-name="address" data-type="name" type="text" name="postal" id="postal" placeholder="Address/Postal Code/Town/Apartment" required>
+            <span class="error">Address/Postal is required</span>
+          </div>
+        </div>
+      </form>
     `
-  }
-  
- 
-
-  getInput(edit){
-    if (edit === 'true') {
-      return `
-        <input type="date" name="name" id="name" value="${this.getAttribute('date')}" required disabled>
-      `
-    }
-    else {
-      return `
-        <input type="date" name="name" id="name"  required>
-      `
-    }
   }
 
   getOptions = (edit) => {
@@ -171,7 +351,7 @@ export default class ScheduleModal extends HTMLElement {
       })
 
       return html
-    } 
+    }
     else {
       console.log('No data available')
     }
@@ -184,9 +364,9 @@ export default class ScheduleModal extends HTMLElement {
     if (edit === 'true') {
       return `
         <div class="head">
-          <h2 class="step-title">Edit your schedule</h2>
+          <h2 class="step-title">Edit your address</h2>
           <p class="description">
-            Edit this schedule, add or remove people.
+            Create or edit delivery addresses based on your current location
           </p>
         </div>
       `
@@ -194,9 +374,9 @@ export default class ScheduleModal extends HTMLElement {
     else {
       return `
         <div class="head">
-          <h2 class="step-title">Make your schedule</h2>
+          <h2 class="step-title">Add an address</h2>
           <p class="description">
-            Create or edit schedules, select date and people.
+            Create or edit delivery addresses based on your current location
           </p>
         </div>
       `
@@ -328,9 +508,9 @@ export default class ScheduleModal extends HTMLElement {
         padding: 20px 0 10px 0;
         display: flex;
         flex-flow: row;
-        /* justify-content: space-between; */
+        justify-content: space-between;
         align-items: center;
-        justify-content: center; 
+        justify-content: center;
         justify-self: end;
       }
 
@@ -397,7 +577,7 @@ export default class ScheduleModal extends HTMLElement {
         align-items: center;
         gap: 0px;
       }
-      
+
        section#content > .container > .head > h2.step-title {
         margin: 0;
         font-family: var(--font-alt);
@@ -406,7 +586,7 @@ export default class ScheduleModal extends HTMLElement {
         font-weight: 500;
         color: #404040;
       }
-      
+
        section#content > .container > .head > p.description {
         margin: 0;
         font-family: var(--font-alt);
@@ -424,11 +604,10 @@ export default class ScheduleModal extends HTMLElement {
         flex-flow: column;
         justify-content: center;
         align-items: start;
-        gap: 15px;
+        gap: 20px;
       }
 
       section#content > .container > .fields > .field {
-        /*border: 1px solid black;*/
         width: 100%;
         display: flex;
         flex-flow: column;
@@ -437,23 +616,51 @@ export default class ScheduleModal extends HTMLElement {
         gap: 2px;
       }
 
-      section#content > .container > .fields > .field > span.error {
+      section#content > .container > .fields  .field.location,
+      section#content > .container > .fields  .field.contact,
+      section#content > .container > .fields  .field.name {
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: start;
+        gap: 20px;
+      }
+
+      section#content > .container > .fields  .field .input-group {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: start;
+        color: #404040;
+        gap: 0;
+      }
+
+      section#content > .container > .fields  label {
+        /* border: 1px solid black; */
+        padding: 0 0 5px 5px;
+        color: #404040;
+      }
+
+      section#content > .container > .fields  .field  span.error {
         color: #ee7752;
         font-size: 0.8rem;
         display: none;
       }
 
-      section#content > .container > .fields > .field > span.wrapper {
+      section#content > .container > .fields  .field  span.wrapper {
         display: flex;
         align-items: center;
         gap: 0;
         width: 100%;
       }
-      section#content > .container > .fields > .field > span.wrapper > span {
+      section#content > .container > .fields  .field  span.wrapper > span {
         border: 1px solid #80808037;
         border-right: none;
         font-size: 1rem;
         width: 60px;
+        height: 40px;
         padding: 10px 12px;
         border-top-left-radius: 12px;
         border-bottom-left-radius: 12px;
@@ -462,32 +669,62 @@ export default class ScheduleModal extends HTMLElement {
         align-items: center;
       }
 
-      section#content > .container > .fields > .field > span.wrapper > input {
+      section#content > .container > .fields  .field  span.wrapper > input {
         border: 1px solid #80808037;
         font-size: 1rem;
         width: calc(100% - 60px);
         outline: none;
+        height: 40px;
         padding: 10px 12px;
+        border-radius: 0;
         border-top-right-radius: 12px;
         border-bottom-right-radius: 12px;
         color: #404040;
       }
 
-      section#content > .container > .fields > .field >  span.wrapper > input:focus {
+      section#content > .container > .fields  .field   span.wrapper > input:focus {
         border: 1px solid #08b86f60;
       }
 
-      section#content > .container > .fields > .field > input {
+      section#content > .container > .fields  .field  input {
         border: 1px solid #80808037;
         font-size: 1rem;
         width: 100%;
+        height: 40px;
         outline: none;
         padding: 10px 12px;
         border-radius: 12px;
         color: #404040;
       }
 
-      section#content > .container > .fields > .field > input:focus {
+      section#content > .container > .fields  .field  input:focus {
+        border: 1px solid #08b86f60;
+      }
+
+      section#content > .container > .fields  .field select {
+        font-size: 1rem;
+        width: 100%;
+        height: 40px;
+        outline: none;
+        padding: 10px 12px;
+        border: 1px solid #80808017;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: #fefefe;
+        color: #404040;
+        border-radius: 12px;
+      }
+
+      select:hover {
+        border-color: #999;
+      }
+
+      select:focus {
+        outline: none;
+        border-color: #555;
+      }
+
+      section#content > .container > .fields  .field  textarea:focus{
         border: 1px solid #08b86f60;
       }
 
