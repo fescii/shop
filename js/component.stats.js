@@ -32,18 +32,18 @@ export default class StatContainer extends HTMLElement {
   getBody() {
     return `
       <div class="top">
-        <h1 class="number">${this.getAttribute('bookings')}</h1>
+        <h1 class="number">${this.getAttribute('items')}</h1>
         <div class="other">
-          <p class="name">Bookings</p>
-          <span class="text">Since ${this.getAttribute('date')}</span>
+          <p class="name">Products</p>
+          <span class="text">Bought since ${this.getAttribute('date')}</span>
         </div>
       </div>
       <div class="body">
         <div class="left">
           <div class="head">
-            <h3 class="title">Bookings</h3>
-            <span class="total">${this.getAttribute('bookings')} Bookings</span>
-          </div>      
+            <h3 class="title">Orders</h3>
+            <span class="total">${this.getAttribute('items')} Products</span>
+          </div>
           ${this.getCards()}
         </div>
         <div class="right">
@@ -329,7 +329,6 @@ export default class StatContainer extends HTMLElement {
         gap: 25px;
       }
 
-
       .body > .left .cards > .card {
         border: 1px solid #e7e7e7;
         padding: 15px 20px;
@@ -341,7 +340,7 @@ export default class StatContainer extends HTMLElement {
         border-radius: 20px;
       }
 
-      .body > .left .cards > .card .logo { 
+      .body > .left .cards > .card .logo {
         /* border: 1px solid #80e280; */
         padding: 0;
         margin: 0 0 15px 0;
@@ -412,7 +411,7 @@ export default class StatContainer extends HTMLElement {
 
       .body > .left .cards > .card > .date .date {
         font-family: var(--font-alt);
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         padding: 0 0 0 8px;
         /* font-weight: 500; */
         color: #808080;
