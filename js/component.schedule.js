@@ -4,7 +4,7 @@ export default class ScheduleContainer extends HTMLElement {
     // We are not even going to touch this.
     super();
 
-    // lets create our shadow root
+    // let's create our shadow root
     this.shadowObj = this.attachShadow({ mode: 'open' });
 
     this.render();
@@ -55,11 +55,9 @@ export default class ScheduleContainer extends HTMLElement {
   getBody() {
     return `
       ${this.getHeader()}
-        
       <div id="content-container" class="content">
         ${this.getSchedules()}
       </div>
-     
     `
   }
 
@@ -67,7 +65,7 @@ export default class ScheduleContainer extends HTMLElement {
     return `
       <div class="header">
         <div class="left">
-          <p class="info">Schedules</p>
+          <p class="info">Addresses</p>
         </div>
         <div class="right">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus"  viewBox="0 0 16 16">
