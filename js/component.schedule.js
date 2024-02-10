@@ -24,7 +24,7 @@ export default class ScheduleContainer extends HTMLElement {
 
   openCreate(){
     const modalContainer = document.querySelector('body > section#modal')
-    const button = this.shadowObj.querySelector('.header > .right')
+    const button = this.shadowObj.querySelector('.header')
 
     // const element = document.createElement('modal-schedule')
 
@@ -64,15 +64,10 @@ export default class ScheduleContainer extends HTMLElement {
   getHeader() {
     return `
       <div class="header">
-        <div class="left">
-          <p class="info">Addresses</p>
-        </div>
-        <div class="right">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus"  viewBox="0 0 16 16">
-            <path  d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-          </svg>
-          <span class="text">Add</span>
-        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus"  viewBox="0 0 16 16">
+          <path  d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+        </svg>
+        <span class="text">Add Address</span>
       </div>
     `
   }
@@ -87,7 +82,7 @@ export default class ScheduleContainer extends HTMLElement {
         photographers="mathias,malcolm,femar" photographers-no="3"
       >
       </schedule-item>
-      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01" 
+      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01"
         photographers="mathias,malcolm,femar" photographers-no="3"
       >
       </schedule-item>
@@ -95,15 +90,7 @@ export default class ScheduleContainer extends HTMLElement {
         photographers="mathias,malcolm,femar" photographers-no="3"
       >
       </schedule-item>
-      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01" 
-        photographers="mathias,malcolm,femar" photographers-no="3"
-      >
-      </schedule-item>
-      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01" 
-        photographers="mathias,malcolm,femar" photographers-no="3"
-      >
-      </schedule-item>
-      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01" 
+      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01"
         photographers="mathias,malcolm,femar" photographers-no="3"
       >
       </schedule-item>
@@ -111,7 +98,15 @@ export default class ScheduleContainer extends HTMLElement {
         photographers="mathias,malcolm,femar" photographers-no="3"
       >
       </schedule-item>
-      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01" 
+      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01"
+        photographers="mathias,malcolm,femar" photographers-no="3"
+      >
+      </schedule-item>
+      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01"
+        photographers="mathias,malcolm,femar" photographers-no="3"
+      >
+      </schedule-item>
+      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01"
         photographers="mathias,malcolm,femar" photographers-no="3"
       >
       </schedule-item>
@@ -138,40 +133,21 @@ export default class ScheduleContainer extends HTMLElement {
       }
 
       .header {
-        border-bottom: 1px solid #80808017;
-        margin: 0;
-        padding: 20px 0;
-        width: 100%;
-        display: flex;
-        flex-flow: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-      }
-
-      .header > .left > p {
-        margin: 0;
-        padding: 0;
-        font-family: var(--font-alt);
-        color: #404040;
-        font-family: 500;
-        font-size: 1.2rem;
-      }
-
-      .header > .right {
-        /* border: 1px solid #80808017; */
+        margin: 35px 0 0 0;
         background-color: rgba(20,167,62,1);
-        padding: 5px 20px 6px 15px;
-        border-radius: 50px;
+        padding: 7px 30px 8px;
+        border-radius: 15px;
         display: flex;
         align-items: center;
+        align-self: center;
         justify-content: center;
         gap: 5px;
+        width: max-content;
         color: white;
         cursor: pointer;
       }
 
-      .header > .right svg {
+      .header > svg {
         /* border: 1px solid #80808017; */
         width: 24px;
         height: 24px;
@@ -180,9 +156,9 @@ export default class ScheduleContainer extends HTMLElement {
         justify-content: center;
       }
 
-      .header > .right span {
+      .header > span {
         font-family: var(--font-alt);
-        font-weight: 500;
+        font-weight: 400;
       }
 
       .content {

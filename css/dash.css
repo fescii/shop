@@ -284,48 +284,21 @@ body > main.main > section.content > .head {
   top: 0;
 }
 
-body > main.main > section.content > .head > .bookings {
-  padding: 0 0 0 20px;
+body > main.main > section.content > .head > .top-title {
+  /* border: 1px solid red; */
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-body > main.main > section.content > .head > .bookings > span.no {
-  padding: 0 8px 0 0;
-  font-size: 2.3rem;
+body > main.main > section.content > .head > .top-title > h3.title {
+  padding: 0 0 0 0;
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 500;
   font-family: var(--font-alt);
   color: #404040;
-}
-
-body > main.main > section.content > .head > .bookings > .text-side {
-  padding: 0 0 0 15px;
-  display: flex;
-  flex-flow: column;
-  align-items: start;
-  justify-content: center;
-  position: relative;
-}
-
-body > main.main > section.content > .head > .bookings > .text-side > span.bar {
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  width: 3px;
-  height: 15px;
-  background-color: #80808088;
-  border-radius: 5px;
-}
-
-body > main.main > section.content > .head > .bookings > .text-side span.text {
-  color: #404040;
-  font-family: var(--font-alt);
-}
-
-body > main.main > section.content > .head > .bookings > .text-side span.days {
-  color: #808080;
-  font-family: var(--font-alt);
-  font-size: 0.8rem;
 }
 
 body > main.main > section.content > .head > .profile {
