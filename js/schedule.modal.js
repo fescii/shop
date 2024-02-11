@@ -63,7 +63,6 @@ export default class ScheduleModal extends HTMLElement {
 
 
   render() {
-    // this.shadowObj.innerHTML = this.getTemplate();
     this.shadowObj.innerHTML = this.getTemplate();
   }
 
