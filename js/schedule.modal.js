@@ -419,7 +419,6 @@ export default class ScheduleModal extends HTMLElement {
         left: 0;
         z-index: 12;
         cursor: pointer;
-        /* background-color: #000; */
       }
 
       section#content {
