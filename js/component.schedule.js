@@ -13,7 +13,6 @@ export default class ScheduleContainer extends HTMLElement {
 
   render() {
     this.shadowObj.innerHTML = this.getTemplate();
-    // this.innerHTML = this.getTemplate();
   }
 
   connectedCallback() {
@@ -25,8 +24,6 @@ export default class ScheduleContainer extends HTMLElement {
   openCreate(){
     const modalContainer = document.querySelector('body > section#modal')
     const button = this.shadowObj.querySelector('.header')
-
-    // const element = document.createElement('modal-schedule')
 
     const modal = `
       <modal-schedule url="some-url" edit="false" date="${button.dataset.dat}">
@@ -198,7 +195,6 @@ export default class ScheduleContainer extends HTMLElement {
         text-align: center;
       }
       .content > .day .date {
-        /* border: 1px solid #808080; */
         color: #808080;
         font-size: 0.95rem;
       }
